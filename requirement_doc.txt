@@ -1,0 +1,237 @@
+﻿1. TENTANG KAMI
+
+
+
+
+2. KOLEKSI
+1. Koleksi Museum
+Metadata isian:
+
+
+No.
+	Nama metadata
+	Format
+	Keterangan
+	1
+	Nama Koleksi
+	Text
+	Nama atau sebutan benda koleksi
+	2
+	Foto Koleksi
+	JPEG, PNG, dll
+	Foto benda dari tampak yang representatif
+	3
+	Nomor Registrasi
+	Number
+	Nomor identitas resmi koleksi
+	4
+	Kategori Koleksi
+	Text
+	Misalnya peralatan penerangan, media informasi, dokumentasi, atau teknologi komunikasi
+	5
+	Periode/Tahun
+	Date
+	Masa pembuatan atau masa penggunaan benda
+	6
+	Asal/Instansi
+	Text
+	Asal benda atau instansi yang terkait
+	7
+	Pembuat/ Produsen
+	Text
+	Nama pembuat atau perusahaan, jika diketahui
+	8
+	Bahan
+	Text
+	Material penyusun benda
+	9
+	Dimensi
+	Text
+	Ukuran panjang, lebar, dan tinggi
+	10
+	Deskripsi Koleksi
+	Text
+	Penjelasan bentuk, fungsi, dan karakteristik benda
+	11
+	Sejarah dan Konteks
+	Text
+	Latar belakang, penggunaan, dan keterkaitan dengan sejarah penerangan
+	12
+	Nilai Penting
+	Text
+	Nilai historis, edukatif, teknologi, atau budaya dari koleksi
+	
+
+
+
+2. Koleksi Perpustakaan
+Embed ke link SLiMS : https://perpustakaan-muspen.komdigi.go.id/
+
+
+3. KONTAK
+1. Media Sosial Instagram: @museumpenerangan 
+2. Media Sosial TikTok: @muspenerangan  
+3. Call Center Muspen: 0811-8132-121
+
+
+4. PUBLIKASI
+Contoh layout  tampilan : https://djkpm.komdigi.go.id/berita 
+Filter : Berita, Artikel, Event
+
+
+5. LAYANAN
+Contoh halaman web: https://museumkepresidenan.id/kunjungan-museum/ 
+
+
+1. Layanan Kunjungan Museum
+Layanan edukasi dan informasi tentang koleksi Museum Penerangan bagi masyarakat yang datang langsung berkunjung ke museum.
+
+
+Jam Operasional:
+Setiap Hari pukul 09.00-15.00
+Istirahat pukul 12.00 - 13.00 WIB
+(Informasi tutup akan diumumkan pada media sosial Museum Penerangan)
+
+
+Harga Tiket Masuk:
+Gratis
+
+
+Prosedur Berkunjung:
+* Kunjungan Individu
+1.  Pengunjung datang langsung ke Museum Penerangan.
+2.  Pengunjung mengisi buku tamu elektronik (e-guestbook) pada tablet yang tersedia di meja resepsionis.
+* Kunjungan Rombongan:
+1. Rombongan melakukan reservasi dan memastikan jadwal kunjungan melalui call center Museum Penerangan di 0811 813 2121.
+2. Kunjungan Rombongan dinyatakan terdaftar setelah petugas call center mengkonfirmasi reservasi melalui WhatsApp.
+3. Untuk Kunjungan Rombongan yang melakukan survei, penentuan jadwal bisa dilakukan secara langsung di lokasi dan tetap harus melakukan reservasi lewat call center. Jika dalam waktu 2x24 jam (2 hari) reservasi belum dilakukan, jadwal kunjungan dibatalkan.
+4. Rombongan datang sesuai jadwal dan mendapat layanan informasi.
+5. Rombongan yang datang terlambat  dapat dilayani sesuai dengan waktu yang tersedia.
+
+
+Tata Tertib Berkunjung:
+Pengunjung mematuhi ketertiban dan ketentuan yang berlaku di Museum Penerangan selama kunjungan ke ruang pamer. Ketentuan ini mencakup: 
+1. Menitipkan barang bawaan di tempat yang telah disediakan
+2. Dilarang membawa makanan dan minuman di dalam ruang pamer; 
+3. Tidak bersandar atau menduduki kaca pelindung dan display koleksi; 
+4. Tidak menyentuh koleksi (kecuali alat peraga yang memiliki tanda khusus); 
+5. Tidak mencoret atau merusak properti Museum Penerangan; 
+6. Tidak merokok/vape di dalam ruang pamer; 
+7. Mengikuti alur kunjungan yang telah ditentukan oleh Museum Penerangan; 
+8. Pengunjung diperbolehkan untuk melakukan pengambilan gambar atau rekaman selama tidak untuk penggunaan komersial dan tidak mengganggu alur kunjungan; 
+9. Pengunjung yang melakukan pengambilan gambar atau rekaman untuk penggunaan komersial perlu mendapatkan persetujuan Museum Penerangan. Petugas Museum Penerangan wajib memastikan tujuan pengambilan gambar atau rekaman yang dilakukan oleh pengunjung apabila menggunakan kamera profesional.
+
+
+
+
+
+
+2. Layanan Kunjungan Daring Kelompok (Virtual Experience)
+Layanan edukasi dan informasi koleksi Museum Penerangan secara daring melalui aplikasi Zoom bagi sekolah, instansi, atau lembaga.
+
+
+Harga Tiket Masuk:
+Gratis
+
+
+Prosedur Berkunjung:
+1. Sekolah/instansi/lembaga yang ingin mengadakan kegiatan Virtual Experience melakukan reservasi melalui call center Museum Penerangan di 0811 813 2121.
+2. Pemohon memiliki jaringan internet yang stabil dan aplikasi Zoom bagi Sekolah/Instansi/Lembaga.
+3. Perangkat audio eksternal yang terhubung dengan perangkat zoom (apabila menggunakan perangkat audio eksternal).
+4. Setelah mendapat tanggal pelaksanaan, Sekolah/Instansi/Lembaga mengirimkan surat permohonan resmi.
+5. Pemohon mendapatkan pelayanan sesuai dengan waktu yang telah disepakati. 
+
+
+
+
+3. Layanan Peminjaman Bangunan dan Ruang Kerja Sama dalam Rangka Diseminasi dan Informasi Publik
+Layanan peminjaman ruang kerja sama untuk kegiatan diseminasi (penyebaran) informasi publik. Ruang yang dapat dipinjam meliputi Ruang Serbaguna, Mini Teater, Amfiteater, Ruangan Relief, dan Halaman Gedung.
+Persyaratan
+1. Layanan ini diperuntukkan bagi masyarakat, komunitas, dan instansi/lembaga.
+2. Surat permohonan peminjaman bangunan dan ruang kerja sama yang ditujukan kepada Kepala Museum Penerangan, dikirim paling lambat 7 hari kerja sebelum waktu peminjaman bangunan dan ruang kerjasama.
+3. Proposal kegiatan peminjaman bangunan dan ruang kerja sama. Kegiatan yang diajukan bertujuan untuk diseminasi (penyebaran) informasi publik.
+
+
+Prosedur
+1. Pemohon berkoordinasi dengan petugas Tata Usaha Museum Penerangan untuk menanyakan ketersediaan ruangan.
+2.  Pemohon melihat langsung (survei) ruangan yang akan digunakan.
+3. Pemohon mengirimkan surat permohonan peminjaman beserta proposal kegiatan kepada Kepala Museum Penerangan.
+4. Petugas memeriksa dan memverifikasi proposal kegiatan dan meminta persetujuan Kepala Museum Penerangan.
+5. Pemohon mendapatkan surat balasan pengajuan layanan peminjaman bangunan dan ruang kerjasama.
+6. Pengguna layanan mempersiapkan ruangan dan melakukan gladi resik satu hari sebelum hari pelaksanaan, dengan berkoordinasi bersama petugas.
+Biaya/Tarif:
+Gratis, tidak dipungut biaya.
+Catatan: jika pemohon membutuhkan tambahan di luar sarana, prasarana, dan fasilitas yang sudah tersedia, biayanya ditanggung oleh pemohon.
+
+
+
+
+
+
+
+
+4. Informasi dan Layanan Khusus Peminjaman Koleksi 
+Layanan peminjaman koleksi Museum Penerangan selama jangka waktu yang telah disepakati, disertai data dan informasi koleksi serta pendampingan teknis apabila diperlukan. Layanan ini diperuntukan kepada Instansi Pemerintah, Lembaga Pendidikan, Museum dan Komunitas, Peneliti dan Akademisi, Media dan Industri Kreatif, Pihak Lain dengan Persetujuan Khusus.
+Persyaratan:
+1. Surat permohonan resmi yang ditujukan kepada Kepala Museum Penerangan. Surat harus menyebutkan tujuan peminjaman, jenis koleksi yang dipinjam, waktu peminjaman, dan rencana penggunaan koleksi.
+2. Surat permohonan peminjaman koleksi dikirimkan paling lambat 14 hari kerja sebelum waktu peminjaman koleksi. 
+3. Identitas pemohon:
+a.           Perorangan: fotokopi KTP dan surat keterangan dari instansi/lembaga terkait.
+b.          Lembaga: profil lembaga dan identitas penanggung jawab kegiatan.
+4. Surat rekomendasi dari instansi terkait. Surat ini terutama dibutuhkan untuk kegiatan akademik, penelitian, atau pameran bersama.
+5. Asuransi atau jaminan keamanan koleksi, yang biayanya ditanggung oleh peminjam. Persyaratan ini berlaku khususnya untuk:
+1. Koleksi yang bernilai sejarah tinggi, langka, atau rapuh sehingga perlu perawatan dan pelestarian (konservasi) khusus.
+2. Koleksi yang akan dipinjam untuk kegiatan di luar kota atau perjalanan jarak jauh.
+6. Dokumentasi teknis yang berisi desain ruang pamer atau penempatan koleksi, sistem keamanan, suhu/kelembapan ruangan, serta cara pengemasan koleksi saat dikirim dan dikembalikan.
+
+
+Prosedur:
+1. Pemohon mengajukan dokumen permohonan peminjaman koleksi kepada Kepala Museum Penerangan sesuai persyaratan.
+2. Museum Penerangan memeriksa kelengkapan dokumen.
+3. Tim Pengelolaan Koleksi memeriksa kondisi koleksi, melakukan evaluasi, dan dan pengarsipan.
+4. Museum Penerangan berhak:
+a.           Menunda atau menolak permohonan jika dokumen tidak lengkap atau koleksi tidak memenuhi syarat untuk dipinjamkan.
+b.          Menolak permohonan yang tidak sesuai dengan visi dan misi Museum Penerangan.
+
+
+
+
+
+
+
+
+5. Layanan Penelitian Ilmiah Individu dan Kelompok
+Layanan akses data koleksi museum serta dukungan teknis dan informasi yang berkaitan dengan penelitian.
+ 
+
+
+2. Layanan Perpustakaan
+
+
+Jam Operasional
+Perpustakaan Mini
+Mengikuti jam operasional Museum Penerangan.
+
+
+Perpustakaan Utama
+Senin–Jumat
+- Buka: 09.00 WIB
+- Istirahat: 12.00–13.00 WIB
+- Tutup: 15.00 WIB
+
+
+Koleksi
+Perpustakaan Museum Penerangan mengelola berbagai jenis koleksi yang berkaitan dengan sejarah penerangan, komunikasi publik, dan perkembangan media informasi, meliputi:
+1. Terbitan Resmi: Laporan, majalah, buletin, dan dokumen yang diterbitkan oleh Departemen Penerangan hingga Kementerian Komunikasi dan Digital.
+2. Koleksi Umum: Literatur tentang komunikasi massa, jurnalistik, penyiaran, perfilman, hubungan masyarakat, dan teknologi informasi.
+
+
+Layanan Perpustakaan
+1. Layanan Referensi dan Baca di Tempat: Pengguna dapat mengakses dan membaca koleksi secara langsung di ruang perpustakaan.
+2. Layanan Informasi: Membantu pengguna dalam penelusuran informasi dan koleksi sesuai kebutuhan.
+3. Katalog Digital (SLiMS): Menyediakan fasilitas penelusuran koleksi secara daring melalui sistem katalog perpustakaan.
+________________
+
+
+Ketentuan Keanggotaan dan Pemanfaatan Koleksi
+Perpustakaan Museum Penerangan tidak menyediakan layanan peminjaman koleksi. Seluruh bahan pustaka hanya dapat dimanfaatkan untuk dibaca di tempat guna menjaga keamanan dan kelestarian koleksi, khususnya bahan pustaka yang memiliki nilai historis dan referensial.

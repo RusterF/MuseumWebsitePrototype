@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Collection;
+use App\Models\Setting;
+use Illuminate\Contracts\View\View;
+
+class VirtualTourController extends Controller
+{
+    public function index(): View
+    {
+        $virtualTourUrl = Setting::get('virtual_tour_url', '');
+
+        // Sample artifacts linked to virtual tour zones
+        $featuredArtifacts = Collection::where('status', 'PUBLISH')
+            ->inRandomOrder()
+            ->limit(5)
+            ->get();
+
+        $zones = [
+            [
+                'id' => 'lobby',
+                'name' => 'Lobby Utama & Gedung Museum',
+                'description' => 'Gedung ikonik Museum Penerangan TMII dengan arsitektur menara pemancar komunikasi dan pelataran monumen bersejarah.',
+                'image' => asset('images/frontbuilding.jpg'),
+                'color' => '#C5A059',
+            ],
+            [
+                'id' => 'timeline',
+                'name' => 'Garis Waktu Layanan Informasi',
+                'description' => 'Zona pameran kronologis perjalanan media komunikasi dan layanan informasi publik Nusantara dari masa pra-sejarah, 1885, hingga era kemerdekaan 1945.',
+                'image' => asset('images/TimelapseLayananInformasi.jpg'),
+                'color' => '#3b82f6',
+            ],
+            [
+                'id' => 'atraksi',
+                'name' => 'Galeri Perfilman & Proyektor Bioskop',
+                'description' => 'Koleksi proyektor film seluloid bioskop klasik, sejarah perfilman nasional dari era awal hingga masa kini (1998-sekarang).',
+                'image' => asset('images/Atraksi.jpeg'),
+                'color' => '#f59e0b',
+            ],
+            [
+                'id' => 'kominfo',
+                'name' => 'Zona Mengenal KOMINFO & Transformasi Digital',
+                'description' => 'Instalasi interaktif multimedia edukasi peran Kementerian Komunikasi dan Digital dalam membangun infrastruktur digital dan literasi bangsa.',
+                'image' => asset('images/MengenalKominfo.jpg'),
+                'color' => '#10b981',
+            ],
+            [
+                'id' => 'satellite',
+                'name' => 'Ruang Era Digital & Satelit Palapa',
+                'description' => 'Tonggak peluncuran Satelit Palapa A1 1976 yang menyatukan kepulauan nusantara hingga era telekomunikasi internet modern.',
+                'image' => 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80',
+                'color' => '#8b5cf6',
+            ],
+        ];
+
+        return view('frontend.virtual_tour', compact('virtualTourUrl', 'featuredArtifacts', 'zones'));
+    }
+}

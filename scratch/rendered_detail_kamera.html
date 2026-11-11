@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="">
+    <title>Kamera Foto dan Flash Kamera Jurnalis Antara - Koleksi Museum - Portal Resmi Museum Penerangan RI</title>
+    <meta name="description" content="Portal resmi Museum Penerangan di Taman Mini Indonesia Indah (TMII), Kementerian Komunikasi dan Digital RI.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="http://localhost:8000/images/color-logo.png" type="image/png">
+
+    <!-- Preload Clean Local Helvetica Font -->
+    <link rel="preload" href="http://localhost:8000/fonts/Helvetica-Roman.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="http://localhost:8000/fonts/Helvetica-Bold.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Bootstrap 5.3 & Font Awesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Canva Theme CSS (100% 90-degree sharp corners) -->
+    <link rel="stylesheet" href="http://localhost:8000/css/canva-theme.css">
+
+    </head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-canva sticky-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="http://localhost:8000">
+                <img src="http://localhost:8000/images/color-logo.png" alt="Museum Penerangan" height="48">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#canvaNavbar" aria-controls="canvaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-4 text-dark"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="canvaNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://localhost:8000/about-us">Tentang</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Koleksi
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm mt-2" style="border-radius: 0 !important;">
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/collections"><i class="fa-solid fa-shapes text-primary me-2"></i> Koleksi Museum</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/collections/perpustakaan"><i class="fa-solid fa-book-bookmark text-info me-2"></i> Koleksi Perpustakaan (SLiMS)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://localhost:8000/forum">Publikasi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm mt-2" style="border-radius: 0 !important; min-width: 270px;">
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/layanan/kunjungan-museum"><i class="fa-solid fa-building-columns text-primary me-2"></i> Layanan Kunjungan Museum</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/layanan/virtual-experience"><i class="fa-solid fa-video text-info me-2"></i> Layanan Virtual Experience (Zoom)</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/layanan/peminjaman"><i class="fa-solid fa-handshake text-warning me-2"></i> Peminjaman Gedung & Koleksi</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/layanan/penelitian"><i class="fa-solid fa-microscope text-success me-2"></i> Layanan Penelitian Ilmiah</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/layanan/perpustakaan"><i class="fa-solid fa-book-open-reader text-secondary me-2"></i> Layanan Perpustakaan</a></li>
+                            <li><hr class="dropdown-divider my-1"></li>
+                            <li><a class="dropdown-item py-2 fw-semibold text-primary" href="http://localhost:8000/booking"><i class="fa-solid fa-ticket me-2"></i> Reservasi Kunjungan</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/virtual-tour"><i class="fa-solid fa-cube text-info me-2"></i> Virtual Tour 360°</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/survey"><i class="fa-solid fa-square-poll-vertical text-warning me-2"></i> Survei Kepuasan Pengunjung</a></li>
+                            <li><a class="dropdown-item py-2" href="http://localhost:8000/saran-aduan"><i class="fa-solid fa-envelope-open-text text-danger me-2"></i> Pengaduan & SPAN LAPOR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://localhost:8000/contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content">
+        <div class="container py-4">
+    <!-- Breadcrumb (Canva Page 5) -->
+    <nav aria-label="breadcrumb" class="mb-2">
+        <ol class="breadcrumb mb-0 small text-muted">
+            <li class="breadcrumb-item"><a href="http://localhost:8000" class="text-decoration-none text-muted">Koleksi</a></li>
+            <li class="breadcrumb-item"><a href="http://localhost:8000/collections" class="text-decoration-none text-muted">Koleksi Museum</a></li>
+                            <li class="breadcrumb-item">
+                    <a href="http://localhost:8000/collections?category=sejarah-fotojurnalisme-dan-jurnalisme" class="text-decoration-none text-muted">
+                        Fotojurnalisme dan Jurnalisme
+                    </a>
+                </li>
+                        <li class="breadcrumb-item active text-dark" aria-current="page">Kamera Foto dan Flash Kamera Jurnalis Antara</li>
+        </ol>
+    </nav>
+
+    <!-- Blue Title (Canva Page 5) -->
+    <h2 class="title-blue mb-4">Kamera Foto dan Flash Kamera Jurnalis Antara</h2>
+
+    <hr class="mb-5 text-muted opacity-25">
+
+    <!-- Main Content: Photo Left, Description Right (Canva Page 5) -->
+    <div class="row align-items-start g-5 mb-5">
+        <div class="col-lg-5 text-center">
+                            <img src="http://localhost:8000/images/WebMuspenBaruImages/KoleksiFotojurnalismedanJurnalisme1.png" alt="Kamera Foto dan Flash Kamera Jurnalis Antara" class="img-fluid" style="max-height: 380px; object-fit: contain;">
+                    </div>
+
+        <div class="col-lg-7">
+            <h5 class="fw-bold mb-3" style="color: #1E293B;">Deskripsi</h5>
+            <div style="line-height: 1.85; font-size: 1rem; color: #1E293B;">
+                &lt;p&gt;Kamera Foto dan Flash Kamera ini digunakan oleh&lt;/p&gt;<br />
+&lt;p&gt;wartawan Kantor Berita &amp;ldquo;Antara&amp;rdquo; pada tahun 1947. Kamera&lt;/p&gt;<br />
+&lt;p&gt;ini berbentuk persegi panjang dengan lensa berbentuk&lt;/p&gt;<br />
+&lt;p&gt;lingkaran di bagian tengah. Terdapat banyak tombol&lt;/p&gt;<br />
+&lt;p&gt;pengaturan dengan bentuk tombol putar yang terlihat&lt;/p&gt;<br />
+&lt;p&gt;seperti lingkaran. Kamera ini terbuat dari logam campuran&lt;/p&gt;<br />
+&lt;p&gt;yang berwarna silver dengan bagian tubuhnya diselimuti&lt;/p&gt;<br />
+&lt;p&gt;material kulit berwarna hitam.&lt;/p&gt;
+            </div>
+        </div>
+    </div>
+
+    <!-- Metadata Table (Canva Page 5 exact 2-column layout) -->
+    <div class="card border p-4 bg-light mb-5" style="border-radius: 0 !important; border-color: #e2e8f0;">
+        <div class="row g-4 small">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <div class="text-muted fw-normal">Nomor Registrasi</div>
+                    <div class="fw-bold text-dark fs-6">1.126</div>
+                </div>
+                <div class="mb-3">
+                    <div class="text-muted fw-normal">Tahun Registrasi</div>
+                    <div class="fw-bold text-dark fs-6">1993</div>
+                </div>
+                <div class="mb-0">
+                    <div class="text-muted fw-normal">Nomor Inventaris</div>
+                    <div class="fw-bold text-dark fs-6">MP.PC/PEU0098a</div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <div class="text-muted fw-normal">Kontributor / Produsen</div>
+                    <div class="fw-bold text-dark fs-6">Finetta Werk Saraber</div>
+                </div>
+                <div class="mb-3">
+                    <div class="text-muted fw-normal">Bahan</div>
+                    <div class="fw-bold text-dark fs-6">Logam, Kaca, dan Plastik</div>
+                </div>
+                <div class="mb-0">
+                    <div class="text-muted fw-normal">Ukuran (Dimensi)</div>
+                    <div class="fw-bold text-dark fs-6">p: 15 cm, l: 6.5 cm, t: 9 cm</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back / Navigation Link -->
+    <div class="mb-4">
+        <a href="http://localhost:8000/collections" class="text-primary fw-bold text-decoration-none">
+            &larr; Kembali ke Katalog Koleksi
+        </a>
+    </div>
+</div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-canva">
+        <div class="container">
+            <div class="row g-4 align-items-start justify-content-between">
+                <!-- Col 1: Logos & Profile -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-canva-logos">
+                        <!-- Muspen White Logo -->
+                        <img src="http://localhost:8000/images/logo_muspen_white.png" alt="Logo Museum Penerangan" class="footer-logo-muspen">
+                        <!-- Komdigi White Logo (matching Canva design) -->
+                        <img src="http://localhost:8000/images/logo_komdigi_white.png" alt="Logo Komdigi" class="footer-logo-komdigi">
+                    </div>
+                    <p class="mb-4">
+                        Muspen merupakan museum bertema komunikasi di Indonesia. Menyimpan sejarah perkembangan layanan informasi dan alat-alat komunikasi dari masa prasejarah sampai saat ini
+                    </p>
+                    <div class="text-secondary small d-none d-md-block">
+                        &copy; 2026 Museum Penerangan. All Rights Reserved.
+                    </div>
+                </div>
+
+                <!-- Col 2: Info & Social Media -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-info-title">Museum Penerangan</div>
+                    <ul class="footer-info-list mb-4">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Taman Mini Indonesia Indah, Jakarta 13560</span>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Informasi dan Reservasi Kunjungan +62 811 813 2121</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>museumpenerangan@gmail.com</span>
+                        </li>
+                    </ul>
+
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/museumpenerangan" target="_blank" class="footer-social-btn" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@muspenerangan" target="_blank" class="footer-social-btn" title="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@museumpenerangan" target="_blank" class="footer-social-btn" title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <div class="text-secondary small d-md-none mt-4">
+                        &copy; 2026 Museum Penerangan. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar scroll script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navbar-canva');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    </body>
+</html>

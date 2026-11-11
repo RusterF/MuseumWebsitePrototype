@@ -1,0 +1,969 @@
+/* ==========================================================================
+   CLEAN SOLID HELVETICA (NO OUTLINES, NO WEIRD EFFECTS)
+   ========================================================================== */
+@font-face {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica'),
+         local('Helvetica Neue'),
+         local('Arial'),
+         url('/fonts/Helvetica-Roman.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Helvetica-Oblique'),
+         local('Helvetica Neue Italic'),
+         local('Arial-ItalicMT'),
+         url('/fonts/Helvetica-Italic.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Helvetica-Bold'),
+         local('Helvetica Neue Bold'),
+         local('Arial-BoldMT'),
+         url('/fonts/Helvetica-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Helvetica-BoldOblique'),
+         local('Helvetica Neue Bold Italic'),
+         local('Arial-BoldItalicMT'),
+         url('/fonts/Helvetica-BoldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* ==========================================================================
+   MUSEUM PENERANGAN - CANVA REDESIGN THEME
+   Modern Corporate & Digital Museum Portal
+   Typography: Clean Solid Helvetica (Plain & Standard)
+   Color Palette: Dark Navy (#101C35), White (#FFFFFF), Blue Accent (#2563EB), Cyan (#00B8D9)
+   Style: 100% Sharp 90-Degree Corners (No Rounded Corners / Zero Border-Radius)
+   ========================================================================== */
+
+:root {
+    --canva-primary: #0A2441;
+    --canva-navy: #0A2441;
+    --canva-dark-blue: #0E2C4E;
+    --canva-accent-blue: #2563EB;
+    --canva-accent-hover: #1D4ED8;
+    --canva-cyan: #00B8D9;
+    --canva-cyan-light: #E0F2FE;
+    --canva-gray-bg: #F8FAFC;
+    --canva-border: #E2E8F0;
+    --canva-text-dark: #1E293B;
+    --canva-text-muted: #64748B;
+    --canva-text-light: #F1F5F9;
+    --canva-font: 'Helvetica', Arial, sans-serif;
+    --muspen-font-sans: 'Helvetica', Arial, sans-serif;
+    --muspen-font-serif: 'Helvetica', Arial, sans-serif;
+    --bs-body-font-family: 'Helvetica', Arial, sans-serif;
+    --navbar-height: 77px;
+    
+    /* Override Bootstrap border radius globally */
+    --bs-border-radius: 0px !important;
+    --bs-border-radius-sm: 0px !important;
+    --bs-border-radius-lg: 0px !important;
+    --bs-border-radius-xl: 0px !important;
+    --bs-border-radius-2xl: 0px !important;
+    --bs-border-radius-pill: 0px !important;
+}
+
+.text-dark, body .text-dark {
+    color: #1E293B !important;
+}
+.text-secondary, body .text-secondary {
+    color: #475569 !important;
+}
+.text-muted, body .text-muted {
+    color: #64748B !important;
+}
+.text-primary, body .text-primary {
+    color: var(--canva-accent-blue) !important;
+}
+
+.section-py {
+    padding: 65px 0;
+}
+
+.max-w-700 {
+    max-width: 700px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global 90-degree sharp corners */
+*,
+*::before,
+*::after {
+    border-radius: 0 !important;
+}
+
+/* Base typography: Solid Helvetica for textual content */
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, span:not([class*="fa-"]), a:not([class*="fa-"]), li, ul, ol, button, input, textarea, select, label,
+.navbar, .nav-link, .dropdown-menu, .dropdown-item,
+.btn, .badge, .card, .table, th, td,
+.title-blue, .kunjungan-title, .kunjungan-card-title, .kunjungan-card-subtitle,
+.agenda-card-title, .koleksi-category-title, .footer-title {
+    font-family: 'Helvetica', Arial, sans-serif !important;
+}
+
+/* ==========================================================================
+   CLEAN JUSTIFIED TEXT FOR NARRATIVE & CONTENT PARAGRAPHS (Rata Kanan Kiri Rapi)
+   ========================================================================== */
+.text-justify,
+.canva-paragraph-justify,
+.article-content,
+.article-content p,
+.section-perjalanan p,
+.section-koleksi p,
+.koleksi-desc-text,
+.koleksi-detail-description,
+.koleksi-detail-description p,
+.about-profil-text,
+.about-profil-text p,
+.about-sejarah-text,
+.about-maklumat-text,
+.about-asosiasi-text,
+.service-desc-text,
+.service-rules-text,
+.service-rules-text p,
+.service-rules-text li,
+.service-rules-text ul li,
+.span-lapor-desc,
+.span-lapor-desc p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* ==========================================================================
+   DEDICATED EMOTE & ICON FONT RULES (Fixes square placeholder box errors)
+   ========================================================================== */
+i,
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+[class^="fa-"],
+[class*=" fa-"] {
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+i.fa-solid,
+.fa-solid,
+i.fas,
+.fas,
+i.fa-solid::before,
+.fa-solid::before,
+i.fas::before,
+.fas::before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+i.fa-regular,
+.fa-regular,
+i.far,
+.far,
+i.fa-regular::before,
+.fa-regular::before,
+i.far::before,
+.far::before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 400 !important;
+}
+
+i.fa-brands,
+.fa-brands,
+i.fab,
+.fab,
+i.fa-brands::before,
+.fa-brands::before,
+i.fab::before,
+.fab::before {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+body {
+    font-family: 'Helvetica', Arial, sans-serif !important;
+    color: var(--canva-text-dark);
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   NAVBAR
+-------------------------------------------------------------------------- */
+.navbar-canva {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--canva-border);
+    padding: 14px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 0 !important;
+}
+
+.navbar-canva.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 20px rgba(16, 28, 53, 0.08);
+}
+
+.navbar-canva .navbar-brand img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-canva .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--canva-text-dark) !important;
+    padding: 8px 18px !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-canva .nav-link:hover,
+.navbar-canva .nav-link.active {
+    color: var(--canva-accent-blue) !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-canva .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+.navbar-canva .btn-reservasi {
+    background-color: var(--canva-accent-blue);
+    border: 1px solid var(--canva-accent-blue);
+    color: #FFFFFF;
+    border-radius: 0 !important;
+    padding: 8px 22px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-canva .btn-reservasi:hover {
+    background-color: var(--canva-accent-hover);
+    border-color: var(--canva-accent-hover);
+    color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION (FULLSCREEN FOLD MATCHING CANVA)
+   User scrolls down to reveal "Rencanakan Kunjunganmu"
+-------------------------------------------------------------------------- */
+.hero-canva {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height, 77px));
+    min-height: 560px;
+    max-height: 880px;
+    background-size: cover;
+    background-position: center 25% !important;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+.hero-canva-overlay {
+    position: absolute;
+    inset: 0;
+    /* Soft left vignette to guarantee 100% text readability while preserving natural daylight and open sky */
+    background: linear-gradient(90deg, rgba(10, 36, 65, 0.40) 0%, rgba(10, 36, 65, 0.15) 45%, rgba(10, 36, 65, 0.0) 75%);
+    pointer-events: none;
+}
+
+.hero-canva-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: #FFFFFF;
+    max-width: 650px;
+}
+
+.hero-canva-content h2,
+.hero-canva-content .hero-subtitle {
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.hero-canva-content h1,
+.hero-canva-content .hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.15;
+    color: #FFFFFF;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 991px) {
+    .hero-canva-content h2,
+    .hero-canva-content .hero-subtitle {
+        font-size: 1.7rem;
+    }
+    .hero-canva-content h1,
+    .hero-canva-content .hero-title {
+        font-size: 3rem;
+    }
+    .kunjungan-title {
+        font-size: 2.2rem;
+    }
+    .kunjungan-card {
+        height: 230px;
+        min-height: 230px;
+    }
+    .kunjungan-card-title {
+        font-size: 1.55rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-canva {
+        height: 360px;
+        min-height: 340px;
+        padding: 30px 0;
+        background-position: center 25% !important;
+    }
+    .hero-canva-content h2,
+    .hero-canva-content .hero-subtitle {
+        font-size: 1.35rem;
+    }
+    .hero-canva-content h1,
+    .hero-canva-content .hero-title {
+        font-size: 2.3rem;
+    }
+    .kunjungan-title {
+        font-size: 1.9rem;
+    }
+    .kunjungan-card {
+        height: 210px;
+        min-height: 210px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION: RENCANAKAN KUNJUNGANMU (NAVY)
+-------------------------------------------------------------------------- */
+.section-kunjungan {
+    background-color: var(--canva-navy);
+    color: #FFFFFF;
+    padding: 70px 0;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.section-kunjungan h2,
+.kunjungan-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 26px;
+    color: #FFFFFF !important;
+}
+
+.info-item-pill {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    border-radius: 0 !important;
+}
+
+.info-item-pill i {
+    font-size: 1.25rem;
+    color: #FFFFFF !important;
+    width: 24px;
+    text-align: center;
+}
+
+/* 90-degree Sharp Cards (Prominent size matching Canva, clean, no underglow) */
+.kunjungan-card {
+    position: relative;
+    border-radius: 0 !important;
+    overflow: hidden;
+    height: 260px;
+    min-height: 260px;
+    cursor: pointer;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    display: block;
+    text-decoration: none !important;
+}
+
+.kunjungan-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: none !important;
+}
+
+.kunjungan-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;
+    transition: transform 0.4s ease;
+}
+
+.kunjungan-card:hover img {
+    transform: scale(1.05);
+}
+
+.kunjungan-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 38, 67, 0.48);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 !important;
+    transition: background 0.3s ease;
+}
+
+.kunjungan-card:hover .kunjungan-card-overlay {
+    background: rgba(12, 38, 67, 0.32);
+}
+
+.kunjungan-card-title {
+    color: #FFFFFF !important;
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.kunjungan-card-title-italic,
+.kunjungan-card-title.fst-italic {
+    font-style: italic !important;
+}
+
+.kunjungan-card-subtitle {
+    color: #FFFFFF !important;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    max-width: 90%;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION: PERJALANAN WAKTU (WHITE)
+-------------------------------------------------------------------------- */
+.section-perjalanan {
+    background-color: #FFFFFF;
+    padding: 85px 0;
+    border-radius: 0 !important;
+}
+
+.title-blue {
+    color: var(--canva-accent-blue);
+    font-family: 'Helvetica', Arial, sans-serif !important;
+    font-size: 2.1rem;
+    font-weight: 700;
+    font-style: normal !important;
+    letter-spacing: normal !important;
+    text-shadow: none !important;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.section-perjalanan p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--canva-text-dark);
+}
+
+/* 90-degree Sharp Image */
+.img-rounded-canva {
+    border-radius: 0 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION: AGENDA ACARA (NAVY)
+-------------------------------------------------------------------------- */
+.section-agenda {
+    background-color: var(--canva-navy);
+    color: #FFFFFF;
+    padding: 80px 0;
+    border-radius: 0 !important;
+}
+
+.section-agenda h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #FFFFFF;
+}
+
+/* 90-degree Sharp Agenda Card */
+.agenda-card {
+    background-color: #FFFFFF;
+    color: var(--canva-text-dark);
+    border-radius: 0 !important;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 180px;
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.agenda-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+.agenda-card-img {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 0 !important;
+}
+
+.agenda-card-body {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 16px 18px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 !important;
+    background-color: #FFFFFF;
+}
+
+.agenda-card-title {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--canva-text-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.agenda-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.78rem;
+    color: var(--canva-accent-blue);
+    margin-bottom: 3px;
+}
+
+.agenda-meta-item i {
+    font-size: 0.82rem;
+    width: 15px;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .agenda-card {
+        height: auto;
+        flex-direction: column;
+    }
+    .agenda-card-img {
+        width: 100% !important;
+        flex: none !important;
+        height: 160px !important;
+    }
+    .agenda-card-body {
+        width: 100% !important;
+        flex: none !important;
+        padding: 16px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION: KOLEKSI ARTEFAK (WHITE)
+-------------------------------------------------------------------------- */
+.section-koleksi {
+    background-color: #FFFFFF;
+    padding: 85px 0;
+    border-radius: 0 !important;
+}
+
+.link-cta-canva {
+    color: var(--canva-accent-blue);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    transition: gap 0.2s ease, color 0.2s ease;
+    border-radius: 0 !important;
+}
+
+.link-cta-canva:hover {
+    color: var(--canva-accent-hover);
+    gap: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION: PUBLIKASI TERBARU (WHITE / LIGHT)
+-------------------------------------------------------------------------- */
+.section-publikasi {
+    background-color: #FFFFFF;
+    padding: 80px 0 95px 0;
+    border-top: 1px solid var(--canva-border);
+    border-radius: 0 !important;
+}
+
+/* 90-degree Sharp Article Card */
+.article-card-canva {
+    background-color: #FFFFFF;
+    border: 1px solid var(--canva-border);
+    border-radius: 0 !important;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card-canva:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.article-card-img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 0 !important;
+}
+
+.article-card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 0 !important;
+}
+
+.article-meta-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+    border-radius: 0 !important;
+}
+
+.article-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--canva-text-dark);
+    line-height: 1.45;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-read-more {
+    font-size: 0.8rem;
+    color: var(--canva-accent-blue);
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER (NAVY)
+-------------------------------------------------------------------------- */
+.footer-canva {
+    background-color: var(--canva-navy);
+    color: #CBD5E1;
+    padding: 65px 0 35px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 !important;
+}
+
+.footer-canva-logos {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 22px;
+}
+
+/* Pure White Logos in Footer */
+.footer-logo-muspen {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo-komdigi {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-canva p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #94A3B8;
+    max-width: 440px;
+}
+
+.footer-info-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.footer-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-info-list li {
+    font-size: 0.88rem;
+    color: #CBD5E1;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-info-list li i {
+    color: var(--canva-cyan);
+    margin-top: 4px;
+    font-size: 0.95rem;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.footer-social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 0 !important;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-btn:hover {
+    background-color: var(--canva-accent-blue);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 45px;
+    padding-top: 20px;
+    font-size: 0.82rem;
+    color: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 3: KOLEKSI CATEGORY CARDS (100% CANVA MATCH)
+-------------------------------------------------------------------------- */
+.koleksi-category-card {
+    position: relative;
+    display: block;
+    height: 245px;
+    overflow: hidden;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.koleksi-category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--canva-accent-blue);
+}
+
+.koleksi-category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;
+    transition: transform 0.4s ease;
+}
+
+.koleksi-category-card:hover img {
+    transform: scale(1.05);
+}
+
+.koleksi-category-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px 14px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(10, 36, 65, 0.88) 0%, rgba(10, 36, 65, 0.35) 40%, rgba(10, 36, 65, 0) 70%);
+    border-radius: 0 !important;
+    transition: background 0.3s ease;
+}
+
+.koleksi-category-card:hover .koleksi-category-overlay {
+    background: linear-gradient(to top, rgba(10, 36, 65, 0.95) 0%, rgba(10, 36, 65, 0.5) 48%, rgba(10, 36, 65, 0.1) 80%);
+}
+
+.koleksi-category-title {
+    color: #FFFFFF !important;
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 4: KOLEKSI DETAIL / 12-ITEM GRID (100% CANVA MATCH)
+-------------------------------------------------------------------------- */
+.koleksi-item-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 0 !important;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-decoration: none;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.koleksi-item-card:hover {
+    border-color: var(--canva-accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.koleksi-item-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;
+    transition: transform 0.3s ease;
+}
+
+.koleksi-item-card:hover img {
+    transform: scale(1.03);
+}
+
+.koleksi-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 10px;
+    background: linear-gradient(to top, rgba(10, 36, 65, 0.88) 0%, rgba(10, 36, 65, 0.45) 60%, rgba(10, 36, 65, 0.0) 100%);
+    color: #FFFFFF !important;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.koleksi-item-card:hover .koleksi-item-overlay,
+.koleksi-item-overlay.show-always {
+    opacity: 1 !important;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 6: PUBLIKASI CARDS (PROPORTIONAL 16:11 HEIGHT - NOT GEPENG)
+-------------------------------------------------------------------------- */
+.publikasi-card-thumb {
+    height: 240px;
+    overflow: hidden;
+    border-radius: 0 !important;
+    position: relative;
+    background-color: #f1f5f9;
+}
+
+.publikasi-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .publikasi-card-thumb img {
+    transform: scale(1.03);
+}
