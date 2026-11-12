@@ -1,27 +1,87 @@
-*.log
-.DS_Store
+# ==============================================================================
+# Environment & Secrets
+# ==============================================================================
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
-/.codex
-/.cursor/
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
+.env.*.php
+.env.*
+!.env.example
 /auth.json
+
+# ==============================================================================
+# Dependencies & Package Managers
+# ==============================================================================
 /node_modules
+/vendor
+npm-debug.log
+yarn-error.log
+
+# ==============================================================================
+# Laravel Cache, Storage & Build Assets
+# ==============================================================================
+*.log
 /public/build
-/public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/public/fonts-manifest.dev.json
 /storage/*.key
 /storage/pail
-/vendor
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/app/public/basset/*
+
+# ==============================================================================
+# Local Database & SQLite
+# ==============================================================================
+*.sqlite
+*.sqlite-journal
+/database/*.sqlite
+/database/*.sqlite-journal
+
+# ==============================================================================
+# Testing & Code Caches
+# ==============================================================================
+.phpunit.result.cache
+/.phpunit.cache
+
+# ==============================================================================
+# IDEs, Editors & AI Workspaces
+# ==============================================================================
+/.idea
+/.vscode
+/.cursor/
+/.codex
+/.nova
+/.zed
+/.fleet
+.phpactor.json
 _ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
 Homestead.json
 Homestead.yaml
+
+# ==============================================================================
+# Operating System & File System Artifacts
+# ==============================================================================
+.DS_Store
 Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ==============================================================================
+# Project Temporary & Scratch Artifacts
+# ==============================================================================
+/scratch/
+test_render*.html
+*.bak
+*_backup.*
+*_original.*
