@@ -3,38 +3,55 @@
 @section('title', 'Mitra & Kolaborasi - Museum Penerangan')
 
 @section('content')
-<!-- Header Banner (British Museum Institutional Style) -->
-<section class="page-header-clean">
+<!-- Header Banner -->
+<section class="page-header-canva">
     <div class="container">
-        <div class="section-badge"><i class="fa-solid fa-handshake me-2"></i> Jaringan Kolaborasi</div>
-        <h1 class="page-title">Mitra & Kolaborasi Strategis</h1>
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb-canva mb-3">
+                <li><a href="{{ route('home') }}">Beranda</a></li>
+                <li class="separator">/</li>
+                <li><a href="{{ route('about-us') }}">Tentang</a></li>
+                <li class="separator">/</li>
+                <li class="current">Mitra & Kolaborasi</li>
+            </ol>
+        </nav>
+
+        <span class="badge-canva mb-2 text-uppercase fw-bold" style="background-color: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">
+            <i class="fa-solid fa-handshake me-1"></i> Jaringan Kolaborasi
+        </span>
+        <h1 class="display-5 fw-bold text-white mb-2">Mitra & Kolaborasi Strategis</h1>
         <p class="page-lead">
             Sinergi berkelanjutan Museum Penerangan bersama lembaga penyiaran publik, dewan pers, kementerian, akademisi, dan komunitas kebudayaan di Indonesia.
         </p>
     </div>
 </section>
 
-<section class="py-5" style="background-color: var(--muspen-bg-base);">
-    <div class="container py-3">
+<section class="section-py bg-light">
+    <div class="container">
         <div class="row g-4 justify-content-center">
             @forelse($partners as $p)
                 <div class="col-md-6 col-lg-4">
-                    <div class="muspen-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-between">
-                        <div class="p-3 w-100 d-flex align-items-center justify-content-center mb-3" style="height: 120px; background-color: #06111E; border: 1px solid var(--muspen-border); border-radius: 4px;">
-                            <img src="{{ $p->logo_url }}" alt="{{ $p->name }}" style="max-height: 70px; max-width: 80%; object-fit: contain; filter: brightness(0.95);">
+                    <div class="card-canva p-4 text-center h-100 d-flex flex-column align-items-center justify-content-between shadow-sm" style="background-color: #FFFFFF;">
+                        <div class="p-3 w-100 d-flex align-items-center justify-content-center mb-3 border" style="height: 120px; background-color: #F8FAFC; border-color: #E2E8F0 !important;">
+                            <img src="{{ $p->logo_url }}" alt="{{ $p->name }}" style="max-height: 70px; max-width: 85%; object-fit: contain;">
                         </div>
-                        <div>
-                            <h5 class="fw-bold mb-2 text-white" style="font-family: var(--muspen-font-serif);">{{ $p->name }}</h5>
-                            <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--muspen-white); border: 1px solid var(--muspen-border); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;">
+                        <div class="mt-2 w-100">
+                            <h5 class="fw-bold mb-2 text-dark">{{ $p->name }}</h5>
+                            <span class="badge-canva" style="font-size: 0.75rem; letter-spacing: 0.03em; text-transform: uppercase;">
                                 {{ $p->category ?: 'Mitra Strategis' }}
                             </span>
                         </div>
                     </div>
                 </div>
             @empty
-                <div class="col-12 text-center py-5 text-white-50">
-                    <i class="fa-solid fa-handshake-angle fa-2x mb-3 opacity-50"></i>
-                    <p>Daftar mitra sedang diperbarui.</p>
+                <div class="col-12 text-center py-5">
+                    <div class="empty-state-canva card-canva shadow-sm">
+                        <i class="fa-solid fa-handshake text-muted"></i>
+                        <h3>Daftar Mitra Sedang Diperbarui</h3>
+                        <p>Daftar mitra dan jejaring kolaborasi Museum Penerangan sedang dalam proses pembaruan informasi resmi.</p>
+                        <a href="{{ route('home') }}" class="btn-canva-outline btn-sm">Kembali ke Beranda</a>
+                    </div>
                 </div>
             @endforelse
         </div>

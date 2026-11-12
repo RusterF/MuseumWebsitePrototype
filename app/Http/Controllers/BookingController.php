@@ -136,33 +136,4 @@ class BookingController extends Controller
 
         return view('frontend.booking.success', compact('booking'));
     }
-
-    public function check(Request $request): View
-    {
-        $booking = null;
-        $searched = false;
-
-        if ($request->filled('query')) {
-            $searched = true;
-            $search = trim($request->input('query'));
-
-            // Extract numeric ID if booking code MP-YYYYMMDD-XXXX
-            $bookingId = null;
-            if (preg_match('/MP-\d+-(\d+)/i', $search, $m)) {
-                $bookingId = (int) $m[1];
-            } elseif (is_numeric($search)) {
-                $bookingId = (int) $search;
-            }
-
-            $booking = Booking::where(function ($q) use ($search, $bookingId) {
-                if ($bookingId) {
-                    $q->where('id', $bookingId);
-                } else {
-                    $q->where('email', $search)->orWhere('phone', $search);
-                }
-            })->first();
-        }
-
-        return view('frontend.booking.check', compact('booking', 'searched'));
-    }
 }

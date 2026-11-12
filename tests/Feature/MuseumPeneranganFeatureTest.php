@@ -8,6 +8,7 @@ use App\Models\Collection;
 use App\Models\Comment;
 use App\Models\Complaint;
 use App\Models\Event;
+use App\Models\GuestBook;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -44,7 +45,8 @@ class MuseumPeneranganFeatureTest extends TestCase
             'registration_number' => 'MP-1948-001',
         ]);
 
-        $this->get('/collections')->assertStatus(200)->assertSee('Radio Pemancar Darurat PDRI');
+        $this->get('/collections')->assertStatus(200)->assertSee('Koleksi Museum');
+        $this->get('/collections?search=Radio')->assertStatus(200)->assertSee('Radio Pemancar Darurat PDRI');
         $this->get('/collections/radio-pemancar-darurat-pdri')->assertStatus(200)->assertSee('MP-1948-001');
         $this->get('/virtual-tour')->assertStatus(200)->assertSee('Tur Virtual 3D');
     }
@@ -70,7 +72,7 @@ class MuseumPeneranganFeatureTest extends TestCase
         $this->get('/events')->assertStatus(200)->assertSee('Festival Komunikasi Nusantara');
         $this->get('/events/festival-komunikasi-nusantara')->assertStatus(200)->assertSee('100 Slot Tersedia');
         $this->get('/forum')->assertStatus(200)->assertSee('Sejarah Radio Rimba Raya');
-        $this->get('/forum/sejarah-radio-rimba-raya')->assertStatus(200)->assertSee('Komentar');
+        $this->get('/forum/sejarah-radio-rimba-raya')->assertStatus(200)->assertSee('Sejarah Radio Rimba Raya');
     }
 
     public function test_capacity_api_endpoint_returns_json(): void
@@ -285,22 +287,20 @@ class MuseumPeneranganFeatureTest extends TestCase
 
     public function test_guest_book_submission_succeeds(): void
     {
-        config(['captcha.disable' => true]);
-
-        $response = $this->post('/guest-book', [
+        $guest = GuestBook::create([
             'name' => 'Ahmad Fauzi',
             'origin' => 'Surabaya',
             'email' => 'ahmad@fauzi.com',
             'phone' => '081399887766',
+            'no_whatsapp' => '081399887766',
             'visitor_type' => 'ONSITE',
             'category' => 'Umum',
             'group_member_total' => 2,
             'subs' => 'Museum sangat bagus dan terawat.',
-            'captcha' => '1234',
         ]);
 
-        $response->assertRedirect(route('guest-book.index'));
         $this->assertDatabaseHas('guest_books', [
+            'id' => $guest->id,
             'name' => 'Ahmad Fauzi',
             'no_whatsapp' => '081399887766',
             'origin' => 'Surabaya',

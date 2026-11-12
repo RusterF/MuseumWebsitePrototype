@@ -6,10 +6,8 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\GuestBookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +32,7 @@ Route::get('/contact', [AboutController::class, 'contact'])->name('contact');
 Route::get('/collections', [CollectionController::class, 'index'])->name('collections.index');
 Route::get('/koleksi', [CollectionController::class, 'index'])->name('koleksi');
 Route::get('/collections/perpustakaan', [CollectionController::class, 'library'])->name('collections.library');
+Route::get('/koleksi/perpustakaan', [CollectionController::class, 'library']);
 Route::get('/collections/{slug}', [CollectionController::class, 'show'])->name('collections.show');
 Route::get('/koleksi/{slug}', [CollectionController::class, 'show']);
 
@@ -56,6 +55,7 @@ Route::get('/events/{slug}', [EventController::class, 'show'])->name('events.sho
 // 7. Booking & Services (Layanan Muspen - Canva Pages 8-12 & Google Doc #5)
 Route::get('/layanan/kunjungan-museum', [ServiceController::class, 'kunjunganMuseum'])->name('services.kunjungan-museum');
 Route::get('/layanan/virtual-experience', [ServiceController::class, 'virtualExperience'])->name('services.virtual-experience');
+Route::get('/virtual-tour', [ServiceController::class, 'virtualExperience'])->name('virtual-tour');
 Route::get('/layanan/peminjaman', [ServiceController::class, 'peminjaman'])->name('services.peminjaman');
 Route::get('/layanan/penelitian', [ServiceController::class, 'penelitian'])->name('services.penelitian');
 Route::get('/layanan/perpustakaan', [ServiceController::class, 'perpustakaan'])->name('services.perpustakaan');
@@ -66,13 +66,8 @@ Route::post('/booking', [BookingController::class, 'store'])
     ->middleware('throttle:3,1')
     ->name('booking.store');
 Route::get('/booking/success/{id}', [BookingController::class, 'success'])->name('booking.success');
-Route::get('/booking/check', [BookingController::class, 'check'])->name('booking.check');
-
-// 8. Digital Guest Book
-Route::get('/guest-book', [GuestBookController::class, 'index'])->name('guest-book.index');
-Route::post('/guest-book', [GuestBookController::class, 'store'])
-    ->middleware('throttle:3,1')
-    ->name('guest-book.store');
+Route::redirect('/booking/check', '/booking');
+Route::redirect('/guest-book', '/');
 
 // 9. Complaints & Suggestions
 Route::get('/saran-aduan', [ComplaintController::class, 'index'])->name('saran-aduan.index');
@@ -83,11 +78,7 @@ Route::post('/saran-aduan', [ComplaintController::class, 'store'])
 Route::get('/saran-aduan/success/{id}', [ComplaintController::class, 'success'])->name('saran-aduan.success');
 Route::get('/saran-aduan/track', [ComplaintController::class, 'track'])->name('saran-aduan.track');
 
-// 10. Satisfaction Survey
-Route::get('/survey', [SurveyController::class, 'create'])->name('survey.create');
-Route::post('/survey', [SurveyController::class, 'store'])
-    ->middleware('throttle:3,1')
-    ->name('survey.store');
+Route::redirect('/survey', '/');
 
 // Captcha Refresh API
 Route::get('/refresh-captcha', function () {

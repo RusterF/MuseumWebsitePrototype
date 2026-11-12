@@ -12,7 +12,8 @@ class EventController extends Controller
     {
         $events = Event::where('status', 'PUBLISH')
             ->orderBy('date', 'desc')
-            ->paginate(6);
+            ->paginate(8)
+            ->withQueryString();
 
         return view('frontend.events.index', compact('events'));
     }

@@ -226,5 +226,65 @@
         "asset_path": "https://www.gravatar.com/avatar/c1302b0f57052ebaa0ac9f89441b902bda9043f14dd73d9a1b1d5f6e1f8adeb2.jpg?s=80&d=blank&r=g",
         "asset_disk_path": "basset/www.gravatar.com/avatar/c1302b0f57052ebaa0ac9f89441b902bda9043f14dd73d9a1b1d5f6e1f8adeb2.jpg",
         "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/style.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/style.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/style.css",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/css/style.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/css/common.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/css/common.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/css/common.css",
+        "asset_disk_path": "basset/vendor/backpack/crud/src/resources/assets/css/common.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/js/common.js": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/js/common.js",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/js/common.js",
+        "asset_disk_path": "basset/vendor/backpack/crud/src/resources/assets/js/common.js",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/js/tabler.js": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/js/tabler.js",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/theme-tabler/resources/assets/js/tabler.js",
+        "asset_disk_path": "basset/vendor/backpack/theme-tabler/resources/assets/js/tabler.js",
+        "asset_attributes": []
+    },
+    "https://www.gravatar.com/avatar/03ee31e03d9be8dfffcd531e6f7f9d0e167551b950ab5d12a8113a7176c9a305.jpg?s=80&d=blank&r=g": {
+        "asset_name": "https://www.gravatar.com/avatar/03ee31e03d9be8dfffcd531e6f7f9d0e167551b950ab5d12a8113a7176c9a305.jpg?s=80&d=blank&r=g",
+        "asset_path": "https://www.gravatar.com/avatar/03ee31e03d9be8dfffcd531e6f7f9d0e167551b950ab5d12a8113a7176c9a305.jpg?s=80&d=blank&r=g",
+        "asset_disk_path": "basset/www.gravatar.com/avatar/03ee31e03d9be8dfffcd531e6f7f9d0e167551b950ab5d12a8113a7176c9a305.jpg",
+        "asset_attributes": []
+    },
+    "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/img/spinner.svg": {
+        "asset_name": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/img/spinner.svg",
+        "asset_path": "C:\\Users\\LENOVO\\Projects\\muspen-canva\\vendor/backpack/crud/src/resources/assets/img/spinner.svg",
+        "asset_disk_path": "basset/vendor/backpack/crud/src/resources/assets/img/spinner.svg",
+        "asset_attributes": []
     }
 }

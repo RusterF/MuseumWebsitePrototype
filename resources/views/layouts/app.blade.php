@@ -38,7 +38,7 @@
             <div class="d-flex align-items-center gap-3 small">
                 <span class="text-white-50"><i class="fa-regular fa-clock me-1 text-white"></i> {{ \App\Models\Setting::get('operational_hours', 'Buka Setiap Hari: 09.00 - 15.00 WIB') }}</span>
                 <span class="opacity-25 text-white">|</span>
-                <a href="{{ route('booking.check') }}" class="text-white text-decoration-none opacity-75 hover-opacity-100"><i class="fa-solid fa-magnifying-glass me-1"></i> Cek Tiket</a>
+                <a href="{{ route('booking.create') }}" class="text-white text-decoration-none opacity-75 hover-opacity-100"><i class="fa-solid fa-ticket me-1"></i> Reservasi</a>
                 <span class="opacity-25 text-white">|</span>
                 @if(backpack_auth()->check())
                     <a href="{{ backpack_url('dashboard') }}" class="btn btn-outline-gold btn-sm py-0 px-2" style="font-size: 0.72rem;"><i class="fa-solid fa-gauge me-1"></i> Dashboard Admin</a>
@@ -119,7 +119,7 @@
 
                     <!-- 3. Dropdown Layanan Kunjungan -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('booking.*') || request()->routeIs('guest-book.*') || request()->routeIs('survey.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('booking.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-ticket"></i>
                             <span>Layanan Kunjungan</span>
                         </a>
@@ -132,39 +132,6 @@
                                     <div>
                                         <span class="dropdown-item-title">Reservasi Kunjungan</span>
                                         <span class="dropdown-item-desc">Pendaftaran rombongan sekolah, instansi & umum (Gratis)</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item {{ request()->routeIs('booking.check') ? 'active' : '' }}" href="{{ route('booking.check') }}">
-                                    <div class="dropdown-item-icon">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </div>
-                                    <div>
-                                        <span class="dropdown-item-title">Cek Status Reservasi</span>
-                                        <span class="dropdown-item-desc">Pengecekan kode booking & persetujuan e-tiket</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item {{ request()->is('guest-book*') ? 'active' : '' }}" href="{{ url('/guest-book') }}">
-                                    <div class="dropdown-item-icon">
-                                        <i class="fa-solid fa-pen-nib"></i>
-                                    </div>
-                                    <div>
-                                        <span class="dropdown-item-title">Buku Tamu Digital</span>
-                                        <span class="dropdown-item-desc">Presensi resmi kehadiran pengunjung onsite & online</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item {{ request()->routeIs('survey.*') ? 'active' : '' }}" href="{{ route('survey.create') }}">
-                                    <div class="dropdown-item-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <div>
-                                        <span class="dropdown-item-title">Survei Kepuasan (IKM)</span>
-                                        <span class="dropdown-item-desc">Kuesioner evaluasi mutu pelayanan fasilitas museum</span>
                                     </div>
                                 </a>
                             </li>
@@ -288,8 +255,8 @@
                         <span class="text-white-50">{{ \App\Models\Setting::get('operational_hours', 'Buka Setiap Hari: 09.00 - 15.00 WIB') }}</span>
                     </div>
                     <div class="d-flex gap-2">
-                        <a href="{{ route('booking.check') }}" class="btn btn-outline-white btn-sm flex-grow-1 py-2">
-                            <i class="fa-solid fa-magnifying-glass me-1"></i> Cek Tiket
+                        <a href="{{ route('booking.create') }}" class="btn btn-outline-white btn-sm flex-grow-1 py-2">
+                            <i class="fa-solid fa-ticket me-1"></i> Reservasi
                         </a>
                         <a href="{{ route('contact') }}" class="btn btn-outline-white btn-sm flex-grow-1 py-2">
                             <i class="fa-solid fa-phone me-1"></i> Kontak
@@ -390,10 +357,7 @@
                     <h5>Layanan Publik</h5>
                     <ul class="footer-links">
                         <li><a href="{{ url('/booking') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Reservasi Kunjungan</a></li>
-                        <li><a href="{{ route('booking.check') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Cek Tiket Reservasi</a></li>
-                        <li><a href="{{ url('/guest-book') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Buku Tamu Digital</a></li>
                         <li><a href="{{ route('saran-aduan.index') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Saran & Pengaduan</a></li>
-                        <li><a href="{{ route('survey.create') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Survei Kepuasan (IKM)</a></li>
                         <li><a href="{{ backpack_url('login') }}"><i class="fa-solid fa-chevron-right fa-xs text-white opacity-50"></i> Portal Admin CMS</a></li>
                     </ul>
                 </div>

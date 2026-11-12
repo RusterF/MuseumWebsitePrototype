@@ -11,7 +11,7 @@
         'sejarah-departemen-penerangan-dan-komunikasi-tradisional' => 'Departemen Penerangan dan Komunikasi Tradisional',
     ];
     $categoryDescriptions = [
-        'sejarah-fotojurnalisme-dan-jurnalisme' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim odio sed justo rhoncus maximus. Donec sapien nulla, viverra vel varius id, suscipit sed ex. Cras convallis dolor semper urna lobortis fringilla. Suspendisse dictum orci urna. Nam vitae lacinia dolor. Quisque non neque turpis.',
+        'sejarah-fotojurnalisme-dan-jurnalisme' => 'Koleksi Sejarah Fotojurnalisme dan Jurnalisme mendokumentasikan kamera bersejarah, perlengkapan rekam gambar, serta karya pewarta foto Indonesia yang mengabadikan peristiwa proklamasi kemerdekaan dan dinamika sejarah bangsa.',
         'sejarah-radio' => 'Koleksi Sejarah Radio merekam jejak perkembangan penyiaran suara di tanah air, mulai dari stasiun radio era kolonial NIROM hingga peran heroik Radio Republik Indonesia (RRI) dalam menyebarkan proklamasi dan mengobarkan semangat perjuangan kemerdekaan bangsa.',
         'sejarah-televisi' => 'Koleksi Sejarah Televisi mendokumentasikan tonggak siaran audiovisual pertama di Indonesia melalui Televisi Republik Indonesia (TVRI) sejak Asian Games IV tahun 1962, meliputi kamera studio legendaris, pemancar, interkom, dan perangkat siaran bersejarah.',
         'sejarah-perfilman' => 'Koleksi Sejarah Perfilman menampilkan saksi bisu perkembangan seni sinematografi nasional, mulai dari kamera produksi film pertama karya Usmar Ismail "Darah dan Doa", proyektor film seluloid, hingga set boneka legendaris Si Unyil.',
@@ -34,11 +34,12 @@
 
         <!-- Breadcrumb below Title (Canva Page 4) -->
         <div class="small text-muted mb-4 pb-2">
-            <a href="{{ route('home') }}" class="text-decoration-none text-muted">Koleksi</a> / 
-            <a href="{{ route('collections.index') }}" class="text-decoration-none text-muted">Koleksi Museum</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-muted">Beranda</a> / 
+            <a href="{{ route('collections.index') }}" class="text-decoration-none text-muted">Koleksi Museum</a> / 
+            <span class="text-dark fw-semibold">{{ $pageTitle }}</span>
         </div>
 
-        <p class="koleksi-desc-text mb-5" style="color: #1E293B; line-height: 1.85; max-width: 950px; font-size: 1rem; text-align: justify; text-justify: inter-word;">
+        <p class="koleksi-desc-text mb-5 text-secondary canva-paragraph-justify" style="line-height: 1.85; max-width: 950px; font-size: 1rem;">
             {{ $descText }}
         </p>
 
@@ -48,22 +49,25 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <a href="{{ route('collections.show', $col->slug) }}" class="koleksi-item-card d-block position-relative overflow-hidden text-decoration-none" title="{{ $col->title }}">
                         <img src="{{ $col->image_url }}" alt="{{ $col->title }}" class="w-100 h-100" style="object-fit: cover;">
-                        <div class="koleksi-item-overlay {{ ($catSlug == 'sejarah-fotojurnalisme-dan-jurnalisme' && $index === 0) ? 'show-always' : '' }}">
+                        <div class="koleksi-item-overlay">
                             {{ $col->title }}
                         </div>
                     </a>
                 </div>
             @empty
                 <div class="col-12 text-center py-5">
-                    <p class="text-muted mb-3">Tidak ada koleksi yang ditemukan pada kategori ini.</p>
-                    <a href="{{ route('collections.index') }}" class="btn btn-outline-primary btn-sm px-4" style="border-radius: 0 !important;">Lihat 6 Kategori Utama</a>
+                    <div class="card-canva p-4 mx-auto" style="max-width: 480px; background-color: #F8FAFC;">
+                        <i class="fa-solid fa-box-open fs-2 text-secondary mb-3"></i>
+                        <p class="text-muted mb-3">Tidak ada koleksi yang ditemukan pada kategori ini.</p>
+                        <a href="{{ route('collections.index') }}" class="btn-canva-outline btn-sm">Lihat 6 Kategori Utama</a>
+                    </div>
                 </div>
             @endforelse
         </div>
 
         <!-- Pagination -->
         @if($collections->hasPages())
-            <div class="d-flex justify-content-center mb-5">
+            <div class="mb-5">
                 {{ $collections->links('pagination::bootstrap-5') }}
             </div>
         @endif
@@ -74,13 +78,13 @@
     <div class="container py-4" style="max-width: 1100px;">
         <nav aria-label="breadcrumb" class="mb-3">
             <ol class="breadcrumb mb-2 small text-muted">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Koleksi</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Beranda</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('collections.index') }}" class="text-decoration-none text-muted">Koleksi Museum</a></li>
                 <li class="breadcrumb-item active text-dark" aria-current="page">Pencarian</li>
             </ol>
         </nav>
 
-        <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-light border" style="border-radius: 0 !important; border-color: #E2E8F0;">
+        <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-light border" style="border-color: #E2E8F0 !important;">
             <div class="text-dark small">
                 Hasil pencarian untuk: <strong class="text-dark">"{{ request('search') }}"</strong> ({{ $collections->total() }} koleksi)
             </div>
@@ -101,14 +105,17 @@
                 </div>
             @empty
                 <div class="col-12 text-center py-5">
-                    <p class="text-muted mb-3">Tidak ada koleksi yang sesuai dengan pencarian Anda.</p>
-                    <a href="{{ route('collections.index') }}" class="btn btn-outline-primary btn-sm px-4" style="border-radius: 0 !important;">Lihat 6 Kategori Utama</a>
+                    <div class="card-canva p-4 mx-auto" style="max-width: 480px; background-color: #F8FAFC;">
+                        <i class="fa-solid fa-magnifying-glass fs-2 text-secondary mb-3"></i>
+                        <p class="text-muted mb-3">Tidak ada koleksi yang sesuai dengan pencarian Anda.</p>
+                        <a href="{{ route('collections.index') }}" class="btn-canva-outline btn-sm">Lihat 6 Kategori Utama</a>
+                    </div>
                 </div>
             @endforelse
         </div>
 
         @if($collections->hasPages())
-            <div class="d-flex justify-content-center mb-5">
+            <div class="mb-5">
                 {{ $collections->links('pagination::bootstrap-5') }}
             </div>
         @endif
@@ -117,7 +124,7 @@
 @else
     <!-- ==================== CANVA PAGE 3: KOLEKSI MUSEUM (6 CATEGORIES) ==================== -->
     <!-- Top Banner: Si Unyil Diorama (Canva Page 3 - Characters prominently visible) -->
-    <div class="w-100 overflow-hidden" style="height: 290px; background-color: #3b82f6;">
+    <div class="w-100 overflow-hidden" style="height: 435px; background-color: #3b82f6;">
         <img src="{{ asset('images/WebMuspenBaruImages/KoleksiBannerUnyil_canva.png') }}" alt="Koleksi Museum Penerangan - Si Unyil" class="w-100 h-100" style="object-fit: cover; object-position: center center;">
     </div>
 
@@ -129,8 +136,8 @@
             <!-- Search Bar: "Cari koleksi..." (Canva Page 3) -->
             <form method="GET" action="{{ route('collections.index') }}" class="mx-auto" style="max-width: 480px;">
                 <div class="input-group" style="box-shadow: none;">
-                    <input type="text" name="search" value="{{ request('search') }}" class="form-control" placeholder="Cari koleksi..." style="border-radius: 0 !important; border-color: #cbd5e1; font-size: 0.95rem;">
-                    <button type="submit" class="btn btn-primary px-4 fw-bold" style="border-radius: 0 !important; background-color: var(--canva-accent-blue); border-color: var(--canva-accent-blue);">
+                    <input type="text" name="search" value="{{ request('search') }}" class="form-control" placeholder="Cari koleksi..." style="border-color: #cbd5e1; font-size: 0.95rem;">
+                    <button type="submit" class="btn btn-primary px-4 fw-bold" style="background-color: var(--canva-accent-blue); border-color: var(--canva-accent-blue);">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
