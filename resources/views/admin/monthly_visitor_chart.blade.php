@@ -13,10 +13,10 @@
         <div class="card card-sm shadow-sm border-0">
             <div class="card-body">
                 <div class="d-flex align-items-center">
-                    <div class="subheader">Buku Tamu Digital</div>
+                    <div class="subheader">Pengunjung Online Web</div>
                 </div>
-                <div class="h1 mb-0 font-weight-bold text-primary">{{ number_format($guestBookCount) }}</div>
-                <div class="text-muted small mt-1">Total entri buku tamu</div>
+                <div class="h1 mb-0 font-weight-bold text-primary">{{ number_format($onlineVisitorCount) }}</div>
+                <div class="text-muted small mt-1">Total trafik website publik</div>
             </div>
         </div>
     </div>
@@ -24,10 +24,10 @@
         <div class="card card-sm shadow-sm border-0">
             <div class="card-body">
                 <div class="d-flex align-items-center">
-                    <div class="subheader">Pengunjung Offline / Kiosk</div>
+                    <div class="subheader">Pengunjung Onsite TMII</div>
                 </div>
-                <div class="h1 mb-0 font-weight-bold text-success">{{ number_format($offlineVisitorCount) }}</div>
-                <div class="text-muted small mt-1">Total pencatatan onsite</div>
+                <div class="h1 mb-0 font-weight-bold text-success">{{ number_format($onsiteVisitorCount) }}</div>
+                <div class="text-muted small mt-1">Pencatatan langsung di museum</div>
             </div>
         </div>
     </div>

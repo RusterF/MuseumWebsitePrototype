@@ -32,6 +32,17 @@
                 <div class="card-canva p-4 p-md-5 h-100 shadow-sm border-top border-4 border-primary d-flex flex-column" style="background-color: #F8FAFC;">
                     <h4 class="fw-bold text-dark mb-4">Saluran Resmi Muspen</h4>
 
+                    @php
+                        $cleanPhone = preg_replace('/[^0-9]/', '', $phone ?? '08118132121');
+                        if (str_starts_with($cleanPhone, '0')) {
+                            $waNumber = '62' . substr($cleanPhone, 1);
+                        } else {
+                            $waNumber = $cleanPhone;
+                        }
+                        $igUrl = \App\Models\Setting::get('instagram', 'https://www.instagram.com/museumpenerangan');
+                        $tiktokUrl = \App\Models\Setting::get('tiktok', 'https://www.tiktok.com/@muspenerangan');
+                    @endphp
+
                     <!-- 1. Call Center -->
                     <div class="d-flex gap-3 mb-4">
                         <div class="p-3 bg-white border text-success d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
@@ -39,8 +50,8 @@
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Call Center & WhatsApp</span>
-                            <h5 class="fw-bold text-dark mb-1">0811-8132-121</h5>
-                            <a href="https://wa.me/628118132121" target="_blank" rel="noopener noreferrer" class="small text-success fw-bold text-decoration-none">
+                            <h5 class="fw-bold text-dark mb-1">{{ $phone ?? '0811-8132-121' }}</h5>
+                            <a href="https://wa.me/{{ $waNumber }}" target="_blank" rel="noopener noreferrer" class="small text-success fw-bold text-decoration-none">
                                 Chat WhatsApp Sekarang &rarr;
                             </a>
                         </div>
@@ -54,7 +65,7 @@
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Instagram</span>
                             <h5 class="fw-bold text-dark mb-1">@museumpenerangan</h5>
-                            <a href="https://www.instagram.com/museumpenerangan" target="_blank" rel="noopener noreferrer" class="small text-danger fw-bold text-decoration-none">
+                            <a href="{{ $igUrl }}" target="_blank" rel="noopener noreferrer" class="small text-danger fw-bold text-decoration-none">
                                 Kunjungi Profil Instagram &rarr;
                             </a>
                         </div>
@@ -68,7 +79,7 @@
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">TikTok</span>
                             <h5 class="fw-bold text-dark mb-1">@muspenerangan</h5>
-                            <a href="https://www.tiktok.com/@muspenerangan" target="_blank" rel="noopener noreferrer" class="small text-dark fw-bold text-decoration-none">
+                            <a href="{{ $tiktokUrl }}" target="_blank" rel="noopener noreferrer" class="small text-dark fw-bold text-decoration-none">
                                 Tonton di TikTok &rarr;
                             </a>
                         </div>
@@ -81,7 +92,7 @@
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Email Resmi</span>
-                            <h6 class="fw-bold text-dark mb-1">museumpenerangan@gmail.com</h6>
+                            <h6 class="fw-bold text-dark mb-1">{{ $email ?? 'museumpenerangan@gmail.com' }}</h6>
                             <span class="small text-muted">Surat resmi, kemitraan & kedinasan</span>
                         </div>
                     </div>
@@ -94,7 +105,7 @@
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Alamat Gedung</span>
                             <p class="small text-secondary mb-0" style="line-height: 1.6;">
-                                Kompleks Taman Mini Indonesia Indah (TMII), Jl. Raya Pintu 2 TMII, Ceger, Cipayung, Jakarta Timur, DKI Jakarta 13560.
+                                {{ strip_tags($address ?? 'Kompleks Taman Mini Indonesia Indah (TMII), Jl. Raya Pintu 2 TMII, Jakarta Timur') }}
                             </p>
                         </div>
                     </div>

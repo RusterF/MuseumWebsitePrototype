@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 // Custom Backpack Routes
 // --------------------------
 // This route file is loaded automatically by Backpack\CRUD.
-// Routes you generate using Backpack\Generators will be placed here.
+// Routes here directly correspond to active frontend features.
 
 Route::group([
     'prefix' => config('backpack.base.route_prefix', 'admin'),
@@ -22,39 +22,30 @@ Route::group([
     ),
     'namespace' => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-    // 1. Content Management (CMS)
-    Route::crud('article', 'ArticleCrudController');
-    Route::crud('cms-category', 'CmsCategoryCrudController');
-    Route::crud('cms-tag', 'CmsTagCrudController');
+    // 1. Content Management (CMS) - Koleksi, Publikasi & Event
     Route::crud('collection', 'CollectionCrudController');
     Route::crud('collection-category', 'CollectionCategoryCrudController');
+    Route::crud('article', 'ArticleCrudController');
+    Route::crud('cms-category', 'CmsCategoryCrudController');
     Route::crud('event', 'EventCrudController');
-    Route::crud('gallery', 'GalleryCrudController');
-    Route::crud('tv-link', 'TvLinkCrudController');
-    Route::crud('team', 'TeamCrudController');
-    Route::crud('partner', 'PartnerCrudController');
 
-    // 2. Reservation Management & Approvals
+    // 2. Reservation Management & Approvals (Layanan Kunjungan)
     Route::crud('booking', 'BookingCrudController');
     Route::crud('reservation-approval', 'ReservationApprovalCrudController');
     Route::post('reservation-approval/{id}/approve', [ReservationApprovalCrudController::class, 'approve'])->name('reservation-approval.approve');
     Route::post('reservation-approval/{id}/reject', [ReservationApprovalCrudController::class, 'reject'])->name('reservation-approval.reject');
 
-    // 3. Moderation & Communication
+    // 3. Pelayanan & Aspirasi Publik
+    Route::crud('complaint', 'ComplaintCrudController');
     Route::crud('comment', 'CommentCrudController');
     Route::post('comment/{id}/approve', [CommentCrudController::class, 'approve'])->name('comment.approve');
     Route::post('comment/{id}/reject', [CommentCrudController::class, 'reject'])->name('comment.reject');
     Route::crud('report', 'ReportCrudController');
-    Route::crud('complaint', 'ComplaintCrudController');
-    Route::crud('guest-book', 'GuestBookCrudController');
 
-    // 4. Visitor Statistics & Surveys
+    // 4. Statistik Pengunjung Website & Onsite
     Route::crud('online-visitor', 'OnlineVisitorCrudController');
     Route::crud('onsite-visitor', 'OnsiteVisitorCrudController');
-    Route::crud('offline-visitor', 'OfflineVisitorCrudController');
     Route::get('monthly-visitor-chart', [MonthlyVisitorChartCrudController::class, 'index'])->name('monthly-visitor-chart');
-    Route::crud('offline-survey', 'OfflineSurveyCrudController');
-    Route::crud('api-survey', 'ApiSurveyCrudController');
 
     // 5. Settings & User Management
     Route::get('setting-web-info', [SettingWebInfoController::class, 'index'])->name('setting-web-info.index');

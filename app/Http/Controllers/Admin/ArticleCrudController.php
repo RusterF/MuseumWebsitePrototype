@@ -29,6 +29,8 @@ class ArticleCrudController extends CrudController
 
     protected function setupListOperation()
     {
+        CRUD::addClause('orderBy', 'date', 'desc');
+
         CRUD::column('id')->label('#');
         CRUD::addColumn([
             'name' => 'title',
@@ -55,7 +57,7 @@ class ArticleCrudController extends CrudController
         ]);
         CRUD::addColumn([
             'name' => 'approval_status',
-            'label' => 'Approval',
+            'label' => 'Status Approval',
             'type' => 'badge',
             'badges' => [
                 'Y' => 'success',
@@ -63,6 +65,18 @@ class ArticleCrudController extends CrudController
                 'P' => 'warning',
             ],
         ]);
+
+        CRUD::addFilter([
+            'name' => 'approval_status',
+            'type' => 'dropdown',
+            'label' => 'Status Tayang',
+        ], [
+            'Y' => 'Disetujui / Tayang di Web',
+            'P' => 'Pending Review',
+            'N' => 'Ditolak',
+        ], function ($value) {
+            CRUD::addClause('where', 'approval_status', $value);
+        });
     }
 
     protected function setupCreateOperation()

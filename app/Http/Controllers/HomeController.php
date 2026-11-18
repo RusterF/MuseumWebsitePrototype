@@ -5,10 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Collection;
 use App\Models\Event;
-use App\Models\GuestBook;
-use App\Models\Partner;
 use App\Models\Setting;
-use App\Models\TvLink;
 use App\Models\Visitor;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -62,12 +59,8 @@ class HomeController extends Controller
                 ->limit(4)
                 ->get();
 
-            $partners = Partner::orderBy('id', 'asc')->get();
-            $tvLinks = TvLink::orderBy('is_featured', 'desc')->limit(4)->get();
-
             $totalCollections = Collection::count();
             $totalArticles = Article::count();
-            $totalGuestBooks = GuestBook::count();
 
             $driver = \DB::connection()->getDriverName();
             $castExpr = $driver === 'sqlite' ? 'CAST(amount AS INTEGER)' : 'CAST(amount AS UNSIGNED)';

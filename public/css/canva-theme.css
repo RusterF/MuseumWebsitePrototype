@@ -260,9 +260,46 @@ body {
 }
 
 @media (min-width: 992px) {
-    .navbar-canva .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
+    /* Seamless desktop hover dropdown (no click required) */
+    .navbar-canva .nav-item.dropdown {
+        position: relative;
+    }
+
+    .navbar-canva .nav-item.dropdown .dropdown-menu {
+        display: block !important;
+        margin-top: 0 !important;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(6px);
+        transition: opacity 0.18s ease-out, transform 0.18s ease-out, visibility 0.18s ease-out;
+    }
+
+    /* Invisible hover bridge connecting nav-link and dropdown menu */
+    .navbar-canva .nav-item.dropdown .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        top: -14px;
+        left: 0;
+        right: 0;
+        height: 14px;
+        background: transparent;
+    }
+
+    .navbar-canva .nav-item.dropdown:hover > .dropdown-menu,
+    .navbar-canva .nav-item.dropdown.show > .dropdown-menu,
+    .navbar-canva .nav-item.dropdown .dropdown-menu:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
+
+    .navbar-canva .nav-item.dropdown:hover > .nav-link.dropdown-toggle,
+    .navbar-canva .nav-item.dropdown.show > .nav-link.dropdown-toggle {
+        color: var(--canva-accent-blue) !important;
     }
 }
 

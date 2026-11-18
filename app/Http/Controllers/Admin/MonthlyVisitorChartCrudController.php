@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Booking;
-use App\Models\GuestBook;
-use App\Models\OfflineVisitor;
 use App\Models\Visitor;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Illuminate\Contracts\View\View;
@@ -40,14 +38,22 @@ class MonthlyVisitorChartCrudController extends CrudController
             ->limit(24)
             ->get();
 
-        $guestBookCount = GuestBook::count();
-        $offlineVisitorCount = OfflineVisitor::count();
+        $onlineVisitorCount = (int) DB::table('visitors')
+            ->where('type', 'ONLINE')
+            ->selectRaw("SUM({$castExpr}) as total")
+            ->value('total');
+
+        $onsiteVisitorCount = (int) DB::table('visitors')
+            ->where('type', 'ONSITE')
+            ->selectRaw("SUM({$castExpr}) as total")
+            ->value('total');
+
         $totalBookings = Booking::count();
         $approvedBookings = Booking::where('approval_status', 'APPROVED')->count();
 
         $this->data['monthlyStats'] = $monthlyStats;
-        $this->data['guestBookCount'] = $guestBookCount;
-        $this->data['offlineVisitorCount'] = $offlineVisitorCount;
+        $this->data['onlineVisitorCount'] = $onlineVisitorCount;
+        $this->data['onsiteVisitorCount'] = $onsiteVisitorCount;
         $this->data['totalBookings'] = $totalBookings;
         $this->data['approvedBookings'] = $approvedBookings;
 
