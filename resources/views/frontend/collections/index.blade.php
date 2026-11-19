@@ -48,7 +48,7 @@
             @forelse($collections as $index => $col)
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <a href="{{ route('collections.show', $col->slug) }}" class="koleksi-item-card d-block position-relative overflow-hidden text-decoration-none" title="{{ $col->title }}">
-                        <img src="{{ $col->image_url }}" alt="{{ $col->title }}" class="w-100 h-100" style="object-fit: cover;">
+                        <img src="{{ $col->image_url }}" alt="{{ $col->title }}" class="w-100 h-100" style="object-fit: cover;" loading="lazy" decoding="async">
                         <div class="koleksi-item-overlay">
                             {{ $col->title }}
                         </div>
@@ -97,7 +97,7 @@
             @forelse($collections as $col)
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <a href="{{ route('collections.show', $col->slug) }}" class="koleksi-item-card d-block position-relative overflow-hidden text-decoration-none" title="{{ $col->title }}">
-                        <img src="{{ $col->image_url }}" alt="{{ $col->title }}" class="w-100 h-100" style="object-fit: cover;">
+                        <img src="{{ $col->image_url }}" alt="{{ $col->title }}" class="w-100 h-100" style="object-fit: cover;" loading="lazy" decoding="async">
                         <div class="koleksi-item-overlay">
                             {{ $col->title }}
                         </div>
@@ -125,7 +125,7 @@
     <!-- ==================== CANVA PAGE 3: KOLEKSI MUSEUM (6 CATEGORIES) ==================== -->
     <!-- Top Banner: Si Unyil Diorama (Canva Page 3 - Characters prominently visible) -->
     <div class="w-100 overflow-hidden" style="height: 435px; background-color: #3b82f6;">
-        <img src="{{ asset('images/WebMuspenBaruImages/KoleksiBannerUnyil_canva.png') }}" alt="Koleksi Museum Penerangan - Si Unyil" class="w-100 h-100" style="object-fit: cover; object-position: center center;">
+        <img src="{{ asset('images/WebMuspenBaruImages/KoleksiBannerUnyil_canva.webp') }}" alt="Koleksi Museum Penerangan - Si Unyil" class="w-100 h-100" style="object-fit: cover; object-position: center center;" decoding="async">
     </div>
 
     <div class="container py-5" style="max-width: 1100px;">
@@ -149,7 +149,7 @@
             <!-- 1. Deppen & Komunikasi Tradisional -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-departemen-penerangan-dan-komunikasi-tradisional']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Departemen Penerangan dan Komunikasi Tradisional.png') }}" alt="Departemen Penerangan dan Komunikasi Tradisional">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Departemen Penerangan dan Komunikasi Tradisional.webp') }}" alt="Departemen Penerangan dan Komunikasi Tradisional" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Departemen Penerangan dan<br>Komunikasi Tradisional</span>
                     </div>
@@ -159,7 +159,7 @@
             <!-- 2. Radio -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-radio']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Radio.png') }}" alt="Radio">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Radio.webp') }}" alt="Radio" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Radio</span>
                     </div>
@@ -169,7 +169,7 @@
             <!-- 3. Televisi -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-televisi']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Televisi.png') }}" alt="Televisi">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Televisi.webp') }}" alt="Televisi" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Televisi</span>
                     </div>
@@ -179,7 +179,7 @@
             <!-- 4. Fotojurnalisme dan Jurnalisme -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-fotojurnalisme-dan-jurnalisme']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Fotojurnalisme dan Jurnalisme.png') }}" alt="Fotojurnalisme dan Jurnalisme">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Fotojurnalisme dan Jurnalisme.webp') }}" alt="Fotojurnalisme dan Jurnalisme" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Fotojurnalisme dan Jurnalisme</span>
                     </div>
@@ -189,7 +189,7 @@
             <!-- 5. Perfilman -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-perfilman']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Perfilman.png') }}" alt="Perfilman">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Perfilman.webp') }}" alt="Perfilman" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Perfilman</span>
                     </div>
@@ -199,7 +199,7 @@
             <!-- 6. Percetakan -->
             <div class="col-md-4 col-sm-6">
                 <a href="{{ route('collections.index', ['category' => 'sejarah-percetakan']) }}" class="koleksi-category-card">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Percetakan.png') }}" alt="Percetakan">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Percetakan.webp') }}" alt="Percetakan" loading="lazy" decoding="async">
                     <div class="koleksi-category-overlay">
                         <span class="koleksi-category-title">Percetakan</span>
                     </div>

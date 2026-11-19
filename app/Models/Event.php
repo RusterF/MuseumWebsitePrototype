@@ -51,6 +51,17 @@ class Event extends Model
             if (Str::startsWith($this->file, ['http://', 'https://'])) {
                 return $this->file;
             }
+
+            $webpPath = preg_replace('/\.(png|jpe?g)$/i', '.webp', $this->file);
+            if ($webpPath !== $this->file) {
+                if (file_exists(public_path($webpPath))) {
+                    return asset($webpPath);
+                }
+                if (file_exists(public_path('storage/'.$webpPath))) {
+                    return asset('storage/'.$webpPath);
+                }
+            }
+
             if (file_exists(public_path($this->file))) {
                 return asset($this->file);
             }

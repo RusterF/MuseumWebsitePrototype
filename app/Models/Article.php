@@ -83,6 +83,17 @@ class Article extends Model
             if (Str::startsWith($this->image, ['http://', 'https://'])) {
                 return $this->image;
             }
+
+            $webpPath = preg_replace('/\.(png|jpe?g)$/i', '.webp', $this->image);
+            if ($webpPath !== $this->image) {
+                if (file_exists(public_path($webpPath))) {
+                    return asset($webpPath);
+                }
+                if (file_exists(public_path('storage/'.$webpPath))) {
+                    return asset('storage/'.$webpPath);
+                }
+            }
+
             if (file_exists(public_path($this->image))) {
                 return asset($this->image);
             }

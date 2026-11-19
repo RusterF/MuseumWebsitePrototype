@@ -11,60 +11,65 @@
     </p>
 
     <!-- Hero Banner Photo: Virtual Tour Filming (Canva Page 9) -->
-    <div class="mb-5 overflow-hidden shadow-sm border" style="border-color: #E2E8F0 !important;">
-        <img src="{{ asset('images/WebMuspenBaruImages/VirtualExperience.png') }}" alt="Virtual Experience Museum Penerangan" class="w-100 h-auto d-block">
+    <div class="mb-5">
+        <img src="{{ asset('images/WebMuspenBaruImages/VirtualExperience.webp') }}" alt="Virtual Experience Museum Penerangan" class="w-100 h-auto d-block img-fluid" decoding="async">
     </div>
 
-    <!-- 1. Harga Tiket Masuk (Google Doc Section 5.2) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Harga Tiket Masuk</h5>
-        </div>
-        <div class="ps-3 text-secondary" style="font-size: 0.95rem;">
-            <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
-            <span class="ms-2 small text-muted">Layanan kunjungan daring tidak dipungut biaya retribusi.</span>
-        </div>
-    </div>
-
-    <!-- 2. Waktu Pelaksanaan Sesi (Canva Page 9) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Waktu Pelaksanaan Sesi</h5>
-        </div>
-        <div class="ps-3 text-secondary" style="line-height: 1.8; font-size: 0.95rem;">
-            <div class="fw-semibold text-dark mb-2"><i class="fa-regular fa-calendar-check me-2 text-primary"></i> Tur Virtual 3D & Pemanduan Daring (Sesuai Konfirmasi Jadwal):</div>
-            <div class="row g-3">
-                <div class="col-sm-6">
-                    <div class="card-canva p-3 bg-white border" style="border-color: #E2E8F0 !important;">
-                        <span class="badge-canva-navy px-2 py-1 small mb-1 d-inline-block">Sesi 1 (Pagi)</span>
-                        <div class="fw-bold text-dark fs-6"><i class="fa-regular fa-clock me-1 text-primary"></i> 09.00 - 11.00 WIB</div>
-                        <small class="text-muted">Tur eksplorasi interaktif & sesi tanya jawab</small>
-                    </div>
+    <!-- 1 & 2: Informasi Akses & Waktu Sesi -->
+    <div class="row g-4 g-lg-5 mb-5">
+        <!-- 1. Harga Tiket Masuk (Google Doc Section 5.2) -->
+        <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🎟️</span>
+                <h5 class="fw-bold text-dark mb-0">Harga Tiket</h5>
+            </div>
+            <div class="ps-3 text-secondary" style="font-size: 1rem;">
+                <div class="mb-2">
+                    <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card-canva p-3 bg-white border" style="border-color: #E2E8F0 !important;">
-                        <span class="badge-canva-navy px-2 py-1 small mb-1 d-inline-block">Sesi 2 (Siang)</span>
-                        <div class="fw-bold text-dark fs-6"><i class="fa-regular fa-clock me-1 text-primary"></i> 13.00 - 15.00 WIB</div>
-                        <small class="text-muted">Tur eksplorasi interaktif & sesi tanya jawab</small>
+                <p class="text-muted small mb-0">Layanan kunjungan daring tidak dipungut biaya retribusi.</p>
+            </div>
+        </div>
+
+        <!-- 2. Waktu Pelaksanaan Sesi (Canva Page 9) -->
+        <div class="col-md-8">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🕒</span>
+                <h5 class="fw-bold text-dark mb-0">Waktu Pelaksanaan Sesi</h5>
+            </div>
+            <div class="ps-3 text-secondary" style="line-height: 1.8; font-size: 1rem;">
+                <p class="text-dark fw-semibold mb-3">
+                    <i class="fa-regular fa-calendar-check me-2 text-primary"></i> Tur Virtual 3D & Pemanduan Daring (Sesuai Konfirmasi Jadwal):
+                </p>
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <span class="badge-canva-navy px-2 py-1 small mb-2 d-inline-block">Sesi 1 (Pagi)</span>
+                        <div class="fw-bold text-dark fs-5 mb-1"><i class="fa-regular fa-clock me-1 text-primary"></i> 09.00 - 11.00 WIB</div>
+                        <p class="text-muted small mb-0">Tur eksplorasi interaktif & sesi tanya jawab</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="badge-canva-navy px-2 py-1 small mb-2 d-inline-block">Sesi 2 (Siang)</span>
+                        <div class="fw-bold text-dark fs-5 mb-1"><i class="fa-regular fa-clock me-1 text-primary"></i> 13.00 - 15.00 WIB</div>
+                        <p class="text-muted small mb-0">Tur eksplorasi interaktif & sesi tanya jawab</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 3. Prosedur Berkunjung (Google Doc Section 5.2) -->
-    <div class="card-canva p-4 mb-5 shadow-sm">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Prosedur Berkunjung</h5>
+    <div class="mb-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="section-emoji-blue">📋</span>
+            <h4 class="fw-bold text-dark mb-0">Prosedur Pendaftaran</h4>
         </div>
-        <ol class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 0.98rem;">
-            <li>Sekolah/instansi/lembaga yang ingin mengadakan kegiatan Virtual Experience melakukan reservasi melalui call center Museum Penerangan di <strong>0811 813 2121</strong>.</li>
-            <li>Pemohon memiliki jaringan internet yang stabil dan aplikasi Zoom bagi Sekolah/Instansi/Lembaga.</li>
-            <li>Perangkat audio eksternal yang terhubung dengan perangkat Zoom (apabila menggunakan perangkat audio eksternal).</li>
-            <li>Setelah mendapat tanggal pelaksanaan, Sekolah/Instansi/Lembaga mengirimkan surat permohonan resmi.</li>
+        <ol class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <li class="mb-2">Sekolah/instansi/lembaga yang ingin mengadakan kegiatan Virtual Experience melakukan reservasi melalui call center Museum Penerangan di <strong>0811 813 2121</strong>.</li>
+            <li class="mb-2">Pemohon memiliki jaringan internet yang stabil dan aplikasi Zoom bagi Sekolah/Instansi/Lembaga.</li>
+            <li class="mb-2">Perangkat audio eksternal yang terhubung dengan perangkat Zoom (apabila menggunakan perangkat audio eksternal).</li>
+            <li class="mb-2">Setelah mendapat tanggal pelaksanaan, Sekolah/Instansi/Lembaga mengirimkan surat permohonan resmi.</li>
             <li>Pemohon mendapatkan pelayanan sesuai dengan waktu yang telah disepakati.</li>
         </ol>
     </div>

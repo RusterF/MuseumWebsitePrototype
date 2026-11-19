@@ -11,35 +11,35 @@
     </p>
 
     <!-- Top Row: Photo on Left, Description on Right (Canva Page 11) -->
-    <div class="row align-items-center g-4 mb-5">
+    <div class="row align-items-center g-4 g-lg-5 mb-5">
         <div class="col-md-6">
-            <div class="card-canva p-2 shadow-sm overflow-hidden border" style="border-color: #E2E8F0 !important;">
-                <img src="{{ asset('images/WebMuspenBaruImages/PenelitianIlmiah.png') }}" alt="Penelitian Ilmiah Museum Penerangan" class="img-fluid w-100" style="object-fit: cover;">
-            </div>
+            <img src="{{ asset('images/WebMuspenBaruImages/PenelitianIlmiah.webp') }}" alt="Penelitian Ilmiah Museum Penerangan" class="img-fluid w-100" style="object-fit: cover;" loading="lazy" decoding="async">
         </div>
         <div class="col-md-6">
-            <p class="service-desc-text text-secondary canva-paragraph-justify mb-3" style="line-height: 1.85; font-size: 0.98rem;">
+            <p class="service-desc-text text-secondary canva-paragraph-justify mb-3" style="line-height: 1.85; font-size: 1rem;">
                 Museum Penerangan memfasilitasi kebutuhan penelitian ilmiah bagi pelajar, mahasiswa jenjang sarjana maupun pascasarjana, dosen, serta peneliti independen. Layanan ini mencakup penyediaan akses data artefak bersejarah, wawancara bersama kurator dan staf teknis konservasi, penelusuran dokumen arsip komunikasi dan penerangan, serta pendampingan langsung di lingkungan museum.
             </p>
-            <div class="card-canva p-3 bg-white border d-flex align-items-center gap-2" style="border-color: #E2E8F0 !important;">
-                <span class="badge-canva-success fs-6 px-3 py-1 fw-bold flex-shrink-0">Biaya / Tarif: Gratis</span>
+            <div class="pt-2 d-flex align-items-center gap-3">
+                <span class="badge-canva-success fs-6 px-3 py-1 fw-bold flex-shrink-0">Tarif: Gratis</span>
                 <span class="small text-muted">Layanan penelitian tidak dipungut biaya retribusi.</span>
             </div>
         </div>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 1. Persyaratan Penelitian (Google Doc Section 5.5) -->
-    <div class="card-canva p-4 mb-4 shadow-sm border-start border-4 border-primary" style="background-color: #F8FAFC;">
+    <div class="mb-5">
         <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Persyaratan Pengajuan Penelitian</h5>
+            <span class="section-emoji-blue">📄</span>
+            <h4 class="fw-bold text-dark mb-0">Persyaratan Pengajuan Penelitian</h4>
         </div>
-        <ol class="ps-3 mb-0 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 0.95rem;">
-            <li>Surat permohonan penelitian dari institusi/lembaga yang ditujukan kepada Kepala Museum Penerangan, yang memuat:
-                <ul class="ps-3 my-1">
-                    <li>Tujuan dan judul penelitian;</li>
-                    <li>Identitas peneliti (nama lengkap, institusi, program studi/jurusan);</li>
-                    <li>Waktu dan durasi pelaksanaan penelitian;</li>
+        <ol class="ps-3 mb-0 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <li class="mb-2">Surat permohonan penelitian dari institusi/lembaga yang ditujukan kepada Kepala Museum Penerangan, yang memuat:
+                <ul class="ps-3 my-2">
+                    <li class="mb-1">Tujuan dan judul penelitian;</li>
+                    <li class="mb-1">Identitas peneliti (nama lengkap, institusi, program studi/jurusan);</li>
+                    <li class="mb-1">Waktu dan durasi pelaksanaan penelitian;</li>
                     <li>Daftar kebutuhan dan permintaan khusus, seperti: akses koleksi, wawancara narasumber, dokumentasi visual, dan lain-lain.</li>
                 </ul>
             </li>
@@ -47,18 +47,20 @@
         </ol>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 2. Prosedur Penelitian (Google Doc Section 5.5) -->
-    <div class="card-canva p-4 mb-5 shadow-sm">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Prosedur Pelaksanaan Penelitian</h5>
+    <div class="mb-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="section-emoji-blue">🔬</span>
+            <h4 class="fw-bold text-dark mb-0">Prosedur Pelaksanaan Penelitian</h4>
         </div>
-        <ol class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 0.98rem;">
-            <li>Calon peneliti mengajukan permohonan penelitian dengan melampirkan surat permohonan beserta identitas diri (KTM/Kartu Pelajar/KTP/Paspor) yang dikirimkan paling lambat <strong>5 hari kerja</strong> sebelum penelitian dilaksanakan.</li>
-            <li>Museum Penerangan memverifikasi dokumen dengan memeriksa kelengkapannya dan kesesuaian tema penelitian.</li>
-            <li>Setelah dokumen terverifikasi, Museum Penerangan menerbitkan <strong>Surat Izin Penelitian</strong>.</li>
-            <li>Peneliti melaksanakan penelitian sesuai jadwal, mengikuti pendampingan dari petugas, dan mematuhi aturan serta tata tertib museum.</li>
-            <li>Peneliti menyerahkan hasil penelitian dalam bentuk <em>softcopy</em> atau <em>hardcopy</em> sebagai arsip museum dan bahan masukan untuk pengembangan museum.</li>
+        <ol class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <li class="mb-2">Calon peneliti mengajukan permohonan penelitian dengan melampirkan surat permohonan beserta identitas diri (KTM/Kartu Pelajar/KTP/Paspor) yang dikirimkan paling lambat <strong>5 hari kerja</strong> sebelum penelitian dilaksanakan.</li>
+            <li class="mb-2">Museum Penerangan memverifikasi dokumen dengan memeriksa kelengkapannya dan kesesuaian tema penelitian.</li>
+            <li class="mb-2">Setelah dokumen terverifikasi, Museum Penerangan menerbitkan <strong>Surat Izin Penelitian</strong>.</li>
+            <li class="mb-2">Peneliti melaksanakan penelitian sesuai jadwal, mengikuti pendampingan dari petugas, dan mematuhi aturan serta tata tertib museum.</li>
+            <li class="mb-2">Peneliti menyerahkan hasil penelitian dalam bentuk <em>softcopy</em> atau <em>hardcopy</em> sebagai arsip museum dan bahan masukan untuk pengembangan museum.</li>
             <li>Setelah penelitian selesai, Museum Penerangan menerbitkan <strong>Surat Keterangan Selesai Penelitian</strong>.</li>
         </ol>
     </div>

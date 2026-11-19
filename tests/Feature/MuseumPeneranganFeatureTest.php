@@ -12,6 +12,7 @@ use App\Models\GuestBook;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Tests\TestCase;
 
 class MuseumPeneranganFeatureTest extends TestCase
@@ -332,5 +333,29 @@ class MuseumPeneranganFeatureTest extends TestCase
         $trackResponse = $this->get('/saran-aduan/track?ticket='.$complaint->id);
         $trackResponse->assertStatus(200);
         $trackResponse->assertSee('Saran Penambahan Lampu Penerangan Koleksi');
+    }
+
+    public function test_publikasi_pagination_shows_nine_items_per_page(): void
+    {
+        for ($i = 1; $i <= 12; $i++) {
+            Article::create([
+                'title' => "Publikasi Ke-{$i}",
+                'slug' => "publikasi-ke-{$i}",
+                'content' => "Konten lengkap publikasi ke-{$i}",
+                'status' => 1,
+                'approval_status' => 'Y',
+                'date' => now()->subDays($i),
+            ]);
+        }
+
+        $response = $this->get('/publikasi');
+        $response->assertStatus(200);
+
+        /** @var LengthAwarePaginator $articles */
+        $articles = $response->viewData('articles');
+        $this->assertEquals(9, $articles->perPage());
+        $this->assertCount(9, $articles->items());
+        $this->assertTrue($articles->hasPages());
+        $this->assertEquals(2, $articles->lastPage());
     }
 }

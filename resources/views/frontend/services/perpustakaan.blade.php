@@ -8,19 +8,17 @@
     <h2 class="title-blue mb-4">Perpustakaan</h2>
 
     <!-- 2 Room Cards at Top: Perpustakaan & Perpustakaan Mini (Canva Page 12) -->
-    <div class="row g-4 mb-5">
+    <div class="row g-4 g-lg-5 mb-5">
         <!-- Card 1: Perpustakaan Utama -->
         <div class="col-md-6">
-            <div class="card-canva p-3 shadow-sm h-100 d-flex flex-column" style="background-color: #FFFFFF;">
-                <div class="overflow-hidden mb-3 border" style="height: 240px; border-color: #E2E8F0 !important;">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Perpustakaan.png') }}" alt="Perpustakaan Museum Penerangan" class="w-100 h-100" style="object-fit: cover;">
-                </div>
-                <h5 class="fw-bold text-dark mb-2">Perpustakaan Utama</h5>
+            <div class="d-flex flex-column h-100">
+                <img src="{{ asset('images/WebMuspenBaruImages/Perpustakaan.webp') }}" alt="Perpustakaan Museum Penerangan" class="w-100 mb-3" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async">
+                <h4 class="fw-bold text-dark mb-2">Perpustakaan Utama</h4>
                 <div class="d-flex align-items-center gap-2 small text-primary mb-2">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Lantai 2 Gedung Museum Penerangan</span>
                 </div>
-                <p class="text-secondary small mb-0 mt-auto pt-2 border-top">
+                <p class="text-secondary small mb-0 mt-auto pt-2 border-top" style="line-height: 1.7;">
                     Menyediakan ruang baca hening dengan koleksi referensi lengkap terbitan berkala, literatur ilmu komunikasi, dan sejarah penerangan nasional.
                 </p>
             </div>
@@ -28,120 +26,119 @@
 
         <!-- Card 2: Perpustakaan Mini -->
         <div class="col-md-6">
-            <div class="card-canva p-3 shadow-sm h-100 d-flex flex-column" style="background-color: #FFFFFF;">
-                <div class="overflow-hidden mb-3 border" style="height: 240px; border-color: #E2E8F0 !important;">
-                    <img src="{{ asset('images/WebMuspenBaruImages/PerpustakaanMini.png') }}" alt="Perpustakaan Mini Museum Penerangan" class="w-100 h-100" style="object-fit: cover;">
-                </div>
-                <h5 class="fw-bold text-dark mb-2">Perpustakaan Mini & Pojok Baca</h5>
+            <div class="d-flex flex-column h-100">
+                <img src="{{ asset('images/WebMuspenBaruImages/PerpustakaanMini.webp') }}" alt="Perpustakaan Mini Museum Penerangan" class="w-100 mb-3" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async">
+                <h4 class="fw-bold text-dark mb-2">Perpustakaan Mini & Pojok Baca</h4>
                 <div class="d-flex align-items-center gap-2 small text-primary mb-2">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Lantai 1 Gedung Museum Penerangan</span>
                 </div>
-                <p class="text-secondary small mb-0 mt-auto pt-2 border-top">
+                <p class="text-secondary small mb-0 mt-auto pt-2 border-top" style="line-height: 1.7;">
                     Area santai dan ramah keluarga untuk membaca buku ensiklopedia visual, majalah populer, dan bacaan umum seputar komunikasi.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- 1. Jam Operasional (Google Doc Section 5.6) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Jam Operasional Perpustakaan</h5>
-        </div>
-        <div class="row g-3">
-            <div class="col-md-6">
-                <div class="card-canva p-3 bg-white border h-100" style="border-color: #E2E8F0 !important;">
-                    <div class="fw-bold text-dark mb-1"><i class="fa-solid fa-book-open text-primary me-2"></i> Perpustakaan Mini (Lantai 1)</div>
-                    <p class="small text-secondary mb-1">Mengikuti jam operasional Museum Penerangan:</p>
-                    <div class="small fw-semibold text-dark">Buka Setiap Hari: pukul 09.00 - 15.00 WIB</div>
+    <hr class="my-5 text-muted opacity-25">
+
+    <!-- 1 & 2. Jam Operasional & Tiket Masuk -->
+    <div class="row g-4 g-lg-5 mb-5">
+        <!-- 1. Jam Operasional (Google Doc Section 5.6) -->
+        <div class="col-md-8">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🕒</span>
+                <h5 class="fw-bold text-dark mb-0">Jam Operasional Perpustakaan</h5>
+            </div>
+            <div class="row g-4 ps-3">
+                <div class="col-sm-6">
+                    <div class="fw-bold text-dark mb-1"><i class="fa-solid fa-book-open text-primary me-2"></i> Perpustakaan Mini (Lt. 1)</div>
+                    <p class="small text-secondary mb-1">Mengikuti jam operasional Museum:</p>
+                    <div class="small fw-semibold text-dark">Setiap Hari: 09.00 - 15.00 WIB</div>
+                    <div class="small text-muted">Istirahat: 12.00 - 13.00 WIB</div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="fw-bold text-dark mb-1"><i class="fa-solid fa-building-columns text-primary me-2"></i> Perpustakaan Utama (Lt. 2)</div>
+                    <p class="small text-secondary mb-1">Hari kerja kedinasan:</p>
+                    <div class="small fw-semibold text-dark">Senin &ndash; Jumat: 09.00 - 15.00 WIB</div>
                     <div class="small text-muted">Istirahat: 12.00 - 13.00 WIB</div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card-canva p-3 bg-white border h-100" style="border-color: #E2E8F0 !important;">
-                    <div class="fw-bold text-dark mb-1"><i class="fa-solid fa-building-columns text-primary me-2"></i> Perpustakaan Utama (Lantai 2)</div>
-                    <p class="small text-secondary mb-1">Beroperasi pada hari kerja kedinasan:</p>
-                    <div class="small fw-semibold text-dark">Senin &ndash; Jumat:</div>
-                    <ul class="small text-secondary ps-3 mb-0">
-                        <li>Buka: 09.00 WIB</li>
-                        <li>Istirahat: 12.00 &ndash; 13.00 WIB</li>
-                        <li>Tutup: 15.00 WIB</li>
-                    </ul>
+        </div>
+
+        <!-- 2. Harga Tiket Masuk (Canva Page 12) -->
+        <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🎟️</span>
+                <h5 class="fw-bold text-dark mb-0">Akses Perpustakaan</h5>
+            </div>
+            <div class="ps-3 text-secondary">
+                <div class="mb-2">
+                    <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
                 </div>
+                <p class="small text-muted mb-0">Akses ruang baca dan koleksi referensi terbuka untuk seluruh pengunjung tanpa pungutan biaya.</p>
             </div>
         </div>
     </div>
 
-    <!-- 2. Harga Tiket Masuk (Canva Page 12) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Harga Tiket Akses Perpustakaan</h5>
-        </div>
-        <div class="ps-3 text-secondary" style="font-size: 0.95rem;">
-            <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
-            <span class="ms-2 small text-muted">Akses ruang baca dan koleksi referensi terbuka untuk seluruh pengunjung museum tanpa pungutan biaya.</span>
-        </div>
-    </div>
+    <hr class="my-5 text-muted opacity-25">
 
     <!-- 3. Koleksi (Google Doc Section 5.6) -->
-    <div class="card-canva p-4 mb-4 shadow-sm">
+    <div class="mb-5">
         <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Koleksi Bahan Pustaka</h5>
+            <span class="section-emoji-blue">📘</span>
+            <h4 class="fw-bold text-dark mb-0">Koleksi Bahan Pustaka</h4>
         </div>
-        <div class="service-rules-text ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 0.98rem;">
-            <p class="mb-3">
+        <div class="service-rules-text ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <p class="mb-4 text-dark">
                 Perpustakaan Museum Penerangan mengelola berbagai jenis koleksi yang berkaitan dengan sejarah penerangan, komunikasi publik, dan perkembangan media informasi, meliputi:
             </p>
-            <div class="row g-3">
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="card-canva p-3 h-100 border-start border-3 border-primary" style="background-color: #F8FAFC;">
-                        <h6 class="fw-bold text-dark mb-1"><i class="fa-solid fa-book-bookmark me-2 text-primary"></i> 1. Terbitan Resmi</h6>
-                        <p class="small text-muted mb-0">Laporan tahunan, majalah, buletin, dan dokumen yang diterbitkan oleh Departemen Penerangan hingga Kementerian Komunikasi dan Digital.</p>
-                    </div>
+                    <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-book-bookmark me-2 text-primary"></i> 1. Terbitan Resmi</h6>
+                    <p class="text-secondary small mb-0" style="line-height: 1.7;">Laporan tahunan, majalah, buletin, dan dokumen yang diterbitkan oleh Departemen Penerangan hingga Kementerian Komunikasi dan Digital.</p>
                 </div>
                 <div class="col-md-6">
-                    <div class="card-canva p-3 h-100 border-start border-3 border-primary" style="background-color: #F8FAFC;">
-                        <h6 class="fw-bold text-dark mb-1"><i class="fa-solid fa-newspaper me-2 text-primary"></i> 2. Koleksi Umum</h6>
-                        <p class="small text-muted mb-0">Literatur tentang komunikasi massa, jurnalistik, penyiaran, perfilman, hubungan masyarakat, dan teknologi informasi.</p>
-                    </div>
+                    <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-newspaper me-2 text-primary"></i> 2. Koleksi Umum</h6>
+                    <p class="text-secondary small mb-0" style="line-height: 1.7;">Literatur tentang komunikasi massa, jurnalistik, penyiaran, perfilman, hubungan masyarakat, dan teknologi informasi.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 4. Layanan Perpustakaan (Google Doc Section 5.6) -->
-    <div class="card-canva p-4 mb-4 shadow-sm">
+    <div class="mb-5">
         <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Layanan Perpustakaan</h5>
+            <span class="section-emoji-blue">ℹ️</span>
+            <h4 class="fw-bold text-dark mb-0">Layanan Perpustakaan</h4>
         </div>
-        <ul class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 0.98rem;">
-            <li><strong>Layanan Referensi dan Baca di Tempat:</strong> Pengguna dapat mengakses dan membaca koleksi secara langsung di ruang perpustakaan.</li>
-            <li><strong>Layanan Informasi:</strong> Membantu pengguna dalam penelusuran informasi dan koleksi sesuai kebutuhan.</li>
+        <ul class="service-rules-text ps-4 text-secondary mb-0 canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <li class="mb-2"><strong>Layanan Referensi dan Baca di Tempat:</strong> Pengguna dapat mengakses dan membaca koleksi secara langsung di ruang perpustakaan.</li>
+            <li class="mb-2"><strong>Layanan Informasi:</strong> Membantu pengguna dalam penelusuran informasi dan koleksi sesuai kebutuhan.</li>
             <li>
                 <strong>Katalog Digital (SLiMS):</strong> Menyediakan fasilitas penelusuran koleksi secara daring melalui sistem katalog perpustakaan.
                 <div class="mt-2">
                     <a href="{{ route('collections.library') }}" class="btn btn-canva-primary btn-sm px-3 py-1">
-                        <i class="fa-solid fa-magnifying-glass me-1"></i> Buka Katalog SLiMS
+                        Buka Katalog SLiMS <i class="fa-solid fa-arrow-right-long ms-1"></i>
                     </a>
                 </div>
             </li>
         </ul>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 5. Ketentuan Keanggotaan dan Pemanfaatan Koleksi (Google Doc Section 5.6) -->
-    <div class="card-canva p-4 mb-5 shadow-sm border-start border-4 border-primary" style="background-color: #F8FAFC;">
+    <div class="mb-5">
         <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Ketentuan Keanggotaan dan Pemanfaatan Koleksi</h5>
+            <span class="section-emoji-blue">📋</span>
+            <h4 class="fw-bold text-dark mb-0">Ketentuan Pemanfaatan Koleksi</h4>
         </div>
-        <div class="ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 0.95rem;">
+        <div class="ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
             <p class="mb-0">
-                Perpustakaan Museum Penerangan tidak menyediakan layanan peminjaman koleksi. Seluruh bahan pustaka hanya dapat dimanfaatkan untuk dibaca di tempat guna menjaga keamanan dan kelestarian koleksi, khususnya bahan pustaka yang memiliki nilai historis dan referensial.
+                Perpustakaan Museum Penerangan tidak menyediakan layanan peminjaman koleksi untuk dibawa pulang. Seluruh bahan pustaka hanya dapat dimanfaatkan untuk dibaca di tempat guna menjaga keamanan dan kelestarian koleksi, khususnya bahan pustaka yang memiliki nilai historis dan referensial.
             </p>
         </div>
     </div>

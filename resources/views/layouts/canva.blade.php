@@ -38,8 +38,8 @@
             </a>
 
             <!-- Mobile Toggle -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#canvaNavbar" aria-controls="canvaNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars fs-4 text-dark"></i>
+            <button class="navbar-toggler" type="button" id="canvaNavbarToggler" data-bs-toggle="collapse" data-bs-target="#canvaNavbar" aria-controls="canvaNavbar" aria-expanded="false" aria-label="Buka Menu Navigasi">
+                <i class="fa-solid fa-bars fs-5 text-dark toggler-icon"></i>
             </button>
 
             <!-- Navigation Links -->
@@ -49,12 +49,12 @@
                         <a class="nav-link {{ request()->routeIs('about-us') || request()->routeIs('tentang') ? 'active' : '' }}" href="{{ route('about-us') }}">Tentang</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('collections.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('collections.*') || request()->routeIs('koleksi*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Koleksi
                         </a>
-                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important;">
-                            <li><a class="dropdown-item py-2" href="{{ route('collections.index') }}"><i class="fa-solid fa-shapes text-primary me-2"></i> Koleksi Museum</a></li>
-                            <li><a class="dropdown-item py-2" href="{{ route('collections.library') }}"><i class="fa-solid fa-book-bookmark text-info me-2"></i> Koleksi Perpustakaan (SLiMS)</a></li>
+                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important; min-width: 220px;">
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('collections.index') || request()->routeIs('koleksi') ? 'active' : '' }}" href="{{ route('collections.index') }}">Koleksi Museum</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('collections.library') ? 'active' : '' }}" href="{{ route('collections.library') }}">Koleksi Perpustakaan</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -64,22 +64,22 @@
                         <a class="nav-link dropdown-toggle {{ request()->routeIs('services.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Layanan
                         </a>
-                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important; min-width: 270px;">
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.kunjungan-museum') ? 'active' : '' }}" href="{{ route('services.kunjungan-museum') }}"><i class="fa-solid fa-building-columns text-primary me-2"></i> Layanan Kunjungan Museum</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.virtual-experience') ? 'active' : '' }}" href="{{ route('services.virtual-experience') }}"><i class="fa-solid fa-video text-info me-2"></i> Layanan Virtual Experience (Zoom)</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.peminjaman') ? 'active' : '' }}" href="{{ route('services.peminjaman') }}"><i class="fa-solid fa-handshake text-warning me-2"></i> Peminjaman Gedung & Koleksi</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.penelitian') ? 'active' : '' }}" href="{{ route('services.penelitian') }}"><i class="fa-solid fa-microscope text-success me-2"></i> Layanan Penelitian Ilmiah</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.perpustakaan') ? 'active' : '' }}" href="{{ route('services.perpustakaan') }}"><i class="fa-solid fa-book-open-reader text-secondary me-2"></i> Layanan Perpustakaan</a></li>
+                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important; min-width: 250px;">
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.kunjungan-museum') ? 'active' : '' }}" href="{{ route('services.kunjungan-museum') }}">Layanan Kunjungan Museum</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.virtual-experience') ? 'active' : '' }}" href="{{ route('services.virtual-experience') }}">Layanan Virtual Experience (Zoom)</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.peminjaman') ? 'active' : '' }}" href="{{ route('services.peminjaman') }}">Peminjaman Gedung & Koleksi</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.penelitian') ? 'active' : '' }}" href="{{ route('services.penelitian') }}">Layanan Penelitian Ilmiah</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('services.perpustakaan') ? 'active' : '' }}" href="{{ route('services.perpustakaan') }}">Layanan Perpustakaan</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {{ request()->routeIs('contact') || request()->routeIs('booking.*') || request()->routeIs('saran-aduan.*') || request()->routeIs('complaint.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Kontak
                         </a>
-                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important; min-width: 240px;">
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}"><i class="fa-solid fa-phone text-secondary me-2"></i> Kontak Kami</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('booking.*') ? 'active' : '' }}" href="{{ route('booking.create') }}"><i class="fa-solid fa-ticket text-secondary me-2"></i> Reservasi Kunjungan</a></li>
-                            <li><a class="dropdown-item py-2 {{ request()->routeIs('saran-aduan.*') || request()->routeIs('complaint.*') ? 'active' : '' }}" href="{{ route('saran-aduan.index') }}"><i class="fa-solid fa-envelope-open-text text-danger me-2"></i> Pengaduan & SPAN LAPOR</a></li>
+                        <ul class="dropdown-menu border-0 shadow-sm mt-lg-0 mt-2" style="border-radius: 0 !important; min-width: 220px;">
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Kontak Kami</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('booking.*') ? 'active' : '' }}" href="{{ route('booking.create') }}">Reservasi Kunjungan</a></li>
+                            <li><a class="dropdown-item py-2 {{ request()->routeIs('saran-aduan.*') || request()->routeIs('complaint.*') ? 'active' : '' }}" href="{{ route('saran-aduan.index') }}">Pengaduan & SPAN LAPOR</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -88,7 +88,7 @@
     </nav>
 
     <!-- ==================== GLOBAL ALERTS ==================== -->
-    @if(session('success') || session('error') || session('warning') || $errors->any())
+    @if(session('success') || session('error') || session('warning') || (isset($errors) && $errors->any()))
     <div class="container mt-3">
         @if(session('success'))
             <div class="alert alert-canva-success alert-dismissible fade show d-flex align-items-center gap-2" role="alert">
@@ -114,7 +114,7 @@
             </div>
         @endif
 
-        @if($errors->any())
+        @if(isset($errors) && $errors->any())
             <div class="alert alert-canva-danger alert-dismissible fade show" role="alert">
                 <div class="d-flex align-items-center gap-2 mb-2 fw-bold">
                     <i class="fa-solid fa-circle-exclamation"></i>
@@ -144,9 +144,9 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="footer-canva-logos">
                         <!-- Muspen White Logo -->
-                        <img src="{{ asset('images/logo_muspen_white.png') }}" alt="Logo Museum Penerangan" class="footer-logo-muspen">
+                        <img src="{{ asset('images/logo_muspen_white.webp') }}" alt="Logo Museum Penerangan" class="footer-logo-muspen" loading="lazy" decoding="async">
                         <!-- Komdigi White Logo (matching Canva design) -->
-                        <img src="{{ asset('images/logo_komdigi_white.png') }}" alt="Logo Komdigi" class="footer-logo-komdigi">
+                        <img src="{{ asset('images/logo_komdigi_white.webp') }}" alt="Logo Komdigi" class="footer-logo-komdigi" loading="lazy" decoding="async">
                     </div>
                     <p class="mb-4">
                         Muspen merupakan museum bertema komunikasi di Indonesia. Menyimpan sejarah perkembangan layanan informasi dan alat-alat komunikasi dari masa prasejarah sampai saat ini
@@ -241,17 +241,36 @@
             });
         }
 
-        // Desktop Navbar Hover Dropdowns (open on hover without needing to click)
+        // Navbar & Dropdowns: Responsive Interaction (Desktop Hover & Mobile Touch Accordion)
+        const canvaNavbar = document.getElementById('canvaNavbar');
+        const toggler = document.getElementById('canvaNavbarToggler');
+        const togglerIcon = toggler ? toggler.querySelector('.toggler-icon') : null;
+
+        // Mobile Toggler Icon Swap (Hamburger <-> Close)
+        if (canvaNavbar && togglerIcon) {
+            canvaNavbar.addEventListener('show.bs.collapse', function() {
+                togglerIcon.classList.remove('fa-bars');
+                togglerIcon.classList.add('fa-xmark');
+                if (toggler) toggler.setAttribute('aria-label', 'Tutup Menu Navigasi');
+            });
+            canvaNavbar.addEventListener('hide.bs.collapse', function() {
+                togglerIcon.classList.remove('fa-xmark');
+                togglerIcon.classList.add('fa-bars');
+                if (toggler) toggler.setAttribute('aria-label', 'Buka Menu Navigasi');
+            });
+        }
+
         const navDropdowns = document.querySelectorAll('.navbar-canva .dropdown');
         navDropdowns.forEach(function(dropdown) {
             let timer;
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
 
+            // Desktop Hover Behavior (>= 992px)
             function show() {
                 if (window.innerWidth >= 992) {
                     clearTimeout(timer);
                     dropdown.classList.add('show');
-                    const menu = dropdown.querySelector('.dropdown-menu');
-                    const toggle = dropdown.querySelector('.dropdown-toggle');
                     if (menu) menu.classList.add('show');
                     if (toggle) toggle.setAttribute('aria-expanded', 'true');
                 }
@@ -261,8 +280,6 @@
                 if (window.innerWidth >= 992) {
                     timer = setTimeout(function() {
                         dropdown.classList.remove('show');
-                        const menu = dropdown.querySelector('.dropdown-menu');
-                        const toggle = dropdown.querySelector('.dropdown-toggle');
                         if (menu) menu.classList.remove('show');
                         if (toggle) toggle.setAttribute('aria-expanded', 'false');
                     }, 120);
@@ -272,12 +289,22 @@
             dropdown.addEventListener('mouseenter', show);
             dropdown.addEventListener('mouseleave', hide);
 
-            // Prevent default jump when clicking toggle on desktop
-            const toggle = dropdown.querySelector('.dropdown-toggle');
+            // Click handling: Desktop prevent jump, Mobile accordion single-open
             if (toggle) {
                 toggle.addEventListener('click', function(e) {
-                    if (window.innerWidth >= 992) {
-                        e.preventDefault();
+                    e.preventDefault();
+                    if (window.innerWidth < 992) {
+                        // On mobile, close sibling dropdowns for clean accordion behavior
+                        const isCurrentlyOpen = dropdown.classList.contains('show');
+                        navDropdowns.forEach(function(other) {
+                            if (other !== dropdown && other.classList.contains('show')) {
+                                other.classList.remove('show');
+                                const otherMenu = other.querySelector('.dropdown-menu');
+                                const otherToggle = other.querySelector('.dropdown-toggle');
+                                if (otherMenu) otherMenu.classList.remove('show');
+                                if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+                            }
+                        });
                     }
                 });
             }

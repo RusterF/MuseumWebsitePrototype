@@ -26,8 +26,12 @@ class Collection extends Model
         'registration_year',
         'inventory_number',
         'contributor',
+        'asal_instansi',
+        'pembuat',
         'bahan',
         'ukuran',
+        'sejarah_konteks',
+        'nilai_penting',
         'available',
         'available_note',
         'photos',
@@ -65,6 +69,17 @@ class Collection extends Model
             if (Str::startsWith($this->file, ['http://', 'https://'])) {
                 return $this->file;
             }
+
+            $webpPath = preg_replace('/\.(png|jpe?g)$/i', '.webp', $this->file);
+            if ($webpPath !== $this->file) {
+                if (file_exists(public_path($webpPath))) {
+                    return asset($webpPath);
+                }
+                if (file_exists(public_path('storage/'.$webpPath))) {
+                    return asset('storage/'.$webpPath);
+                }
+            }
+
             if (file_exists(public_path($this->file))) {
                 return asset($this->file);
             }
@@ -75,16 +90,16 @@ class Collection extends Model
 
         // Return a context-aware fallback image using authentic Museum Penerangan photos
         $fallbacks = [
-            'sejarah-perfilman' => asset('images/WebMuspenBaruImages/Perfilman.png'),
-            'sejarah-percetakan' => asset('images/WebMuspenBaruImages/Percetakan.png'),
-            'sejarah-radio' => asset('images/WebMuspenBaruImages/Radio.png'),
-            'sejarah-televisi' => asset('images/WebMuspenBaruImages/Televisi.png'),
-            'sejarah-departemen-penerangan-dan-komunikasi-tradisional' => asset('images/WebMuspenBaruImages/Departemen Penerangan dan Komunikasi Tradisional.png'),
-            'sejarah-fotojurnalisme-dan-jurnalisme' => asset('images/WebMuspenBaruImages/Fotojurnalisme dan Jurnalisme.png'),
+            'sejarah-perfilman' => asset('images/WebMuspenBaruImages/Perfilman.webp'),
+            'sejarah-percetakan' => asset('images/WebMuspenBaruImages/Percetakan.webp'),
+            'sejarah-radio' => asset('images/WebMuspenBaruImages/Radio.webp'),
+            'sejarah-televisi' => asset('images/WebMuspenBaruImages/Televisi.webp'),
+            'sejarah-departemen-penerangan-dan-komunikasi-tradisional' => asset('images/WebMuspenBaruImages/Departemen Penerangan dan Komunikasi Tradisional.webp'),
+            'sejarah-fotojurnalisme-dan-jurnalisme' => asset('images/WebMuspenBaruImages/Fotojurnalisme dan Jurnalisme.webp'),
         ];
 
         $categorySlug = $this->category?->slug ?? '';
 
-        return $fallbacks[$categorySlug] ?? asset('images/Atraksi.jpeg');
+        return $fallbacks[$categorySlug] ?? asset('images/Atraksi.webp');
     }
 }

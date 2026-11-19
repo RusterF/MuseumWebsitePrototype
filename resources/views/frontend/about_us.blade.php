@@ -6,7 +6,7 @@
 <div class="container py-4">
     <!-- Top Hero Image: Facade of Museum Penerangan (Canva Page 2) -->
     <figure class="mb-4">
-        <img src="{{ asset('images/WebMuspenBaruImages/GedungMuspenTentang.png') }}" alt="Gedung Museum Penerangan" class="img-fluid w-100 shadow-sm" style="max-height: 440px; object-fit: cover; object-position: center bottom;">
+        <img src="{{ asset('images/WebMuspenBaruImages/GedungMuspenTentang.webp') }}" alt="Gedung Museum Penerangan" class="img-fluid w-100 shadow-sm" style="max-height: 440px; object-fit: cover; object-position: center bottom;" decoding="async">
         <figcaption class="text-end text-muted small mt-2">Gedung Museum Penerangan, Taman Mini Indonesia Indah</figcaption>
     </figure>
 
@@ -32,43 +32,37 @@
 
     <!-- 2. Perjalanan Waktu Layanan Informasi dan Komunikasi (Canva Page 2) -->
     <div class="mb-5">
-        <h2 class="title-blue mb-4">Perjalanan Waktu Layanan Informasi dan Komunikasi</h2>
+        <h2 class="title-blue mb-5">Perjalanan Waktu Layanan Informasi dan Komunikasi</h2>
 
         <!-- Milestone 1: Tahun 1945 -->
-        <div class="card-canva p-4 p-md-5 mb-4 shadow-sm" style="background-color: #FFFFFF;">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-5 col-md-6">
-                    <div class="overflow-hidden border shadow-sm" style="border-color: #E2E8F0 !important;">
-                        <img src="{{ asset('images/WebMuspenBaruImages/SejarahMuseumPenerangan1.png') }}" alt="Rapat Raksasa Lapangan Ikada 1945" class="img-fluid w-100" style="height: 260px; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-6">
-                    <h4 class="fw-bold text-dark mb-3" style="font-size: 1.3rem; line-height: 1.4;">
-                        Penyebaran Informasi dan Perjuangan Kedaulatan Bangsa
-                    </h4>
-                    <p class="about-sejarah-text text-dark canva-paragraph-justify mb-0" style="font-size: 1.02rem; line-height: 1.85;">
-                        Gagasan pendirian museum bertema komunikasi di Indonesia bermula dari kesadaran mendalam akan peranan vital informasi dan media dalam menjaga kedaulatan bangsa. Peristiwa bersejarah seperti Rapat Raksasa di Lapangan Ikada 19 September 1945 dan siaran radio perjuangan membuktikan bahwa penyebaran berita yang cepat dan akurat adalah kunci kemerdekaan Indonesia.
-                    </p>
-                </div>
+        <div class="row align-items-center g-4 g-lg-5 mb-5 pb-4 border-bottom border-light">
+            <div class="col-lg-5 col-md-6">
+                <img src="{{ asset('images/WebMuspenBaruImages/SejarahMuseumPenerangan1.webp') }}" alt="Rapat Raksasa Lapangan Ikada 1945" class="img-fluid w-100" style="height: 280px; object-fit: cover;" loading="lazy" decoding="async">
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <span class="badge text-primary bg-primary bg-opacity-10 fw-bold px-3 py-1 mb-2" style="font-size: 0.85rem; border-radius: 0 !important;">Tahun 1945</span>
+                <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem; line-height: 1.4;">
+                    Penyebaran Informasi dan Perjuangan Kedaulatan Bangsa
+                </h4>
+                <p class="about-sejarah-text text-dark canva-paragraph-justify mb-0" style="font-size: 1.02rem; line-height: 1.85;">
+                    Gagasan pendirian museum bertema komunikasi di Indonesia bermula dari kesadaran mendalam akan peranan vital informasi dan media dalam menjaga kedaulatan bangsa. Peristiwa bersejarah seperti Rapat Raksasa di Lapangan Ikada 19 September 1945 dan siaran radio perjuangan membuktikan bahwa penyebaran berita yang cepat dan akurat adalah kunci kemerdekaan Indonesia.
+                </p>
             </div>
         </div>
 
         <!-- Milestone 2: Tahun 1993 -->
-        <div class="card-canva p-4 p-md-5 shadow-sm" style="background-color: #FFFFFF;">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7 col-md-6">
-                    <h4 class="fw-bold text-dark mb-3" style="font-size: 1.3rem; line-height: 1.4;">
-                        Peresmian Museum Penerangan di TMII Jakarta
-                    </h4>
-                    <p class="about-sejarah-text text-dark canva-paragraph-justify mb-0" style="font-size: 1.02rem; line-height: 1.85;">
-                        Pada tanggal <strong>20 April 1993</strong>, bertepatan dengan HUT TMII ke-18, Presiden Republik Indonesia Ke-2, <strong>H.M. Soeharto</strong>, atas prakarsa Ibu <strong>Hj. Tien Soeharto</strong>, meresmikan Museum Penerangan untuk umum. Gedung museum dirancang dengan arsitektur berbentuk lidah api obor obelisk dan bintang bertransmisi, merefleksikan kobaran semangat juru penerang yang senantiasa menerangi pemikiran masyarakat nusantara dari Sabang sampai Merauke.
-                    </p>
-                </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="overflow-hidden border shadow-sm" style="border-color: #E2E8F0 !important;">
-                        <img src="{{ asset('images/WebMuspenBaruImages/SejarahMuseumPenerangan2.png') }}" alt="Mobil Penerangan Departemen Penerangan" class="img-fluid w-100" style="height: 260px; object-fit: cover;">
-                    </div>
-                </div>
+        <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-7 col-md-6 order-2 order-md-1">
+                <span class="badge text-primary bg-primary bg-opacity-10 fw-bold px-3 py-1 mb-2" style="font-size: 0.85rem; border-radius: 0 !important;">Tahun 1993</span>
+                <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem; line-height: 1.4;">
+                    Peresmian Museum Penerangan di TMII Jakarta
+                </h4>
+                <p class="about-sejarah-text text-dark canva-paragraph-justify mb-0" style="font-size: 1.02rem; line-height: 1.85;">
+                    Pada tanggal <strong>20 April 1993</strong>, bertepatan dengan HUT TMII ke-18, Presiden Republik Indonesia Ke-2, <strong>H.M. Soeharto</strong>, atas prakarsa Ibu <strong>Hj. Tien Soeharto</strong>, meresmikan Museum Penerangan untuk umum. Gedung museum dirancang dengan arsitektur berbentuk lidah api obor obelisk dan bintang bertransmisi, merefleksikan kobaran semangat juru penerang yang senantiasa menerangi pemikiran masyarakat nusantara dari Sabang sampai Merauke.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-6 order-1 order-md-2">
+                <img src="{{ asset('images/WebMuspenBaruImages/SejarahMuseumPenerangan2.webp') }}" alt="Mobil Penerangan Departemen Penerangan" class="img-fluid w-100" style="height: 280px; object-fit: cover;" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -82,7 +76,7 @@
         <!-- Top: Kepala Museum -->
         <div class="text-center mb-5">
             <div class="d-inline-block text-center">
-                <img src="{{ asset('images/WebMuspenBaruImages/Rizki Andono Prakoso.png') }}" alt="Rizki Andono Prakoso" style="height: 290px; width: auto; object-fit: contain;" class="img-fluid mb-3">
+                <img src="{{ asset('images/WebMuspenBaruImages/Rizki Andono Prakoso.webp') }}" alt="Rizki Andono Prakoso" style="height: 290px; width: auto; object-fit: contain;" class="img-fluid mb-3" loading="lazy" decoding="async">
                 <h4 class="fw-bold mb-1 text-dark" style="font-size: 1.35rem;">Rizki Andono Prakoso</h4>
                 <div class="fw-semibold text-primary" style="font-size: 1.05rem;">Kepala Museum Penerangan</div>
             </div>
@@ -93,7 +87,7 @@
             <!-- 1. Yuliah -->
             <div class="col-md-4 col-sm-6 mb-3">
                 <div class="d-inline-block text-center">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Yuliah.png') }}" alt="Yuliah" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Yuliah.webp') }}" alt="Yuliah" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3" loading="lazy" decoding="async">
                     <h5 class="fw-bold mb-1 text-dark" style="font-size: 1.2rem;">Yuliah</h5>
                     <div class="fw-semibold text-primary" style="font-size: 0.95rem;">Kepala Sub Bagian Tata Usaha</div>
                 </div>
@@ -102,7 +96,7 @@
             <!-- 2. Yuri Arief Waspodo -->
             <div class="col-md-4 col-sm-6 mb-3">
                 <div class="d-inline-block text-center">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Yuri Arief Waspodo.png') }}" alt="Yuri Arief Waspodo" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Yuri Arief Waspodo.webp') }}" alt="Yuri Arief Waspodo" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3" loading="lazy" decoding="async">
                     <h5 class="fw-bold mb-1 text-dark" style="font-size: 1.2rem;">Yuri Arief Waspodo</h5>
                     <div class="fw-semibold text-primary" style="font-size: 0.95rem;">Ketua Tim Pengelolaan Koleksi</div>
                 </div>
@@ -111,7 +105,7 @@
             <!-- 3. Vetri Ridha Bhineka -->
             <div class="col-md-4 col-sm-6 mb-3">
                 <div class="d-inline-block text-center">
-                    <img src="{{ asset('images/WebMuspenBaruImages/Vetri Ridha Bhineka.png') }}" alt="Vetri Ridha Bhineka" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3">
+                    <img src="{{ asset('images/WebMuspenBaruImages/Vetri Ridha Bhineka.webp') }}" alt="Vetri Ridha Bhineka" style="height: 270px; width: auto; object-fit: contain;" class="img-fluid mb-3" loading="lazy" decoding="async">
                     <h5 class="fw-bold mb-1 text-dark" style="font-size: 1.2rem;">Vetri Ridha Bhineka</h5>
                     <div class="fw-semibold text-primary" style="font-size: 0.95rem;">Ketua Tim Pelayanan Publik</div>
                 </div>
@@ -124,28 +118,32 @@
     <!-- 4. Visi & Misi (Canva Page 2) -->
     <div class="mb-5">
         <h2 class="title-blue mb-4">Visi & Misi</h2>
-        <div class="row align-items-center g-4">
+        <div class="row align-items-center g-4 g-lg-5">
             <div class="col-md-4 text-center">
-                <img src="{{ asset('images/color-logo.png') }}" alt="Muspen - Saksi Perubahan Generasi" class="img-fluid" style="max-height: 130px; object-fit: contain;">
+                <img src="{{ asset('images/color-logo.webp') }}" alt="Muspen - Saksi Perubahan Generasi" class="img-fluid" style="max-height: 140px; object-fit: contain;" loading="lazy" decoding="async">
             </div>
             <div class="col-md-8">
-                <div class="card-canva p-4 shadow-sm">
-                    <div class="mb-3">
-                        <h5 class="fw-bold mb-2 text-dark"><i class="fa-solid fa-compass text-primary me-2"></i> Visi</h5>
-                        <p class="fst-italic mb-0 text-dark ps-4 border-start border-3 border-primary" style="font-size: 1.05rem;">
-                            “Menjadi SMART Museum yang edukatif, inklusif, dan inovatif.”
-                        </p>
+                <!-- Visi -->
+                <div class="mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="badge text-primary bg-primary bg-opacity-10 fw-bold px-3 py-1" style="font-size: 0.85rem; border-radius: 0 !important;">VISI</span>
                     </div>
-                    <hr class="my-3 text-muted opacity-25">
-                    <div>
-                        <h5 class="fw-bold mb-2 text-dark"><i class="fa-solid fa-bullseye text-primary me-2"></i> Misi</h5>
-                        <ol class="ps-3 mb-0 text-dark" style="line-height: 1.85;">
-                            <li>Mewujudkan tata kelola kelembagaan museum yang berintegritas, akuntabel, dan berkelanjutan.</li>
-                            <li>Mengelola dan melestarikan koleksi sejarah komunikasi bangsa secara profesional dan berstandar internasional.</li>
-                            <li>Meningkatkan kualitas pelayanan publik prima yang berorientasi pada kepuasan pengunjung.</li>
-                            <li>Memperluas jejaring kolaborasi dan kemitraan strategis untuk pengembangan pengetahuan komunikasi publik.</li>
-                        </ol>
+                    <blockquote class="fst-italic mb-0 text-dark ps-3 py-2 border-start border-3 border-primary" style="font-size: 1.15rem; line-height: 1.7; background-color: transparent;">
+                        “Menjadi SMART Museum yang edukatif, inklusif, dan inovatif.”
+                    </blockquote>
+                </div>
+
+                <!-- Misi -->
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="badge text-primary bg-primary bg-opacity-10 fw-bold px-3 py-1" style="font-size: 0.85rem; border-radius: 0 !important;">MISI</span>
                     </div>
+                    <ol class="ps-3 mb-0 text-dark" style="line-height: 1.85; font-size: 1.02rem;">
+                        <li class="mb-2">Mewujudkan tata kelola kelembagaan museum yang berintegritas, akuntabel, dan berkelanjutan.</li>
+                        <li class="mb-2">Mengelola dan melestarikan koleksi sejarah komunikasi bangsa secara profesional dan berstandar internasional.</li>
+                        <li class="mb-2">Meningkatkan kualitas pelayanan publik prima yang berorientasi pada kepuasan pengunjung.</li>
+                        <li>Memperluas jejaring kolaborasi dan kemitraan strategis untuk pengembangan pengetahuan komunikasi publik.</li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -161,12 +159,12 @@
                 <p class="about-maklumat-text text-dark canva-paragraph-justify mb-3" style="font-size: 1.02rem; line-height: 1.85;">
                     Dalam rangka mewujudkan penyelenggaraan pelayanan publik sesuai dengan asas penyelenggaraan pemerintahan yang baik dan guna mewujudkan kepastian hak dan kewajiban berbagai pihak yang terkait dengan penyelenggaraan pelayanan, Museum Penerangan menyusun sebuah pernyataan kesanggupan penyelenggara dalam melaksanakan pelayanan sesuai dengan standar pelayanan atau maklumat pelayanan.
                 </p>
-                <a href="{{ asset('images/WebMuspenBaruImages/GedungMuspenTentang.png') }}" target="_blank" rel="noopener noreferrer" class="link-cta-canva fw-bold" style="font-size: 0.95rem;">
+                <a href="{{ asset('images/WebMuspenBaruImages/GedungMuspenTentang.webp') }}" target="_blank" rel="noopener noreferrer" class="link-cta-canva fw-bold" style="font-size: 0.95rem;">
                     Unduh Dokumen Maklumat Pelayanan <i class="fa-solid fa-arrow-right-long ms-1"></i>
                 </a>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{{ asset('images/WebMuspenBaruImages/LogoFolder.png') }}" alt="Standar Maklumat Pelayanan" style="max-height: 140px;" class="img-fluid">
+                <img src="{{ asset('images/WebMuspenBaruImages/LogoFolder.webp') }}" alt="Standar Maklumat Pelayanan" style="max-height: 140px;" class="img-fluid" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -178,7 +176,7 @@
         <h2 class="title-blue mb-4">Induk Asosiasi</h2>
         <div class="row align-items-center g-4">
             <div class="col-md-4 text-center">
-                <img src="{{ asset('images/WebMuspenBaruImages/LogoKomdigi.png') }}" alt="Kementerian Komunikasi dan Digital RI" class="img-fluid" style="max-height: 130px;">
+                <img src="{{ asset('images/WebMuspenBaruImages/LogoKomdigi.webp') }}" alt="Kementerian Komunikasi dan Digital RI" class="img-fluid" style="max-height: 130px;" loading="lazy" decoding="async">
             </div>
             <div class="col-md-8">
                 <p class="about-asosiasi-text text-dark canva-paragraph-justify mb-0" style="font-size: 1.02rem; line-height: 1.85;">

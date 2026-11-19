@@ -31,7 +31,7 @@
                     <!-- Thumbnail (Canva Page 6 - Proportional height, not gepeng) -->
                     <div class="publikasi-card-thumb mb-2">
                         <a href="{{ route('events.show', $event->slug) }}">
-                            <img src="{{ $event->image_url }}" alt="{{ $event->name }}">
+                            <img src="{{ $event->image_url }}" alt="{{ $event->name }}" loading="lazy" decoding="async">
                         </a>
                     </div>
 

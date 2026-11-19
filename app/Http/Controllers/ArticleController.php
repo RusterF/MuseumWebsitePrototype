@@ -37,7 +37,7 @@ class ArticleController extends Controller
             });
         }
 
-        $articles = $query->orderBy('date', 'desc')->paginate(8)->withQueryString();
+        $articles = $query->orderBy('date', 'desc')->paginate(9)->withQueryString();
 
         return view('frontend.articles.index', compact('articles', 'categories'));
     }

@@ -22,7 +22,7 @@
 
     <!-- Featured Banner Photo (Canva Page 7) -->
     <div class="mb-4 overflow-hidden border shadow-sm" style="border-color: #E2E8F0 !important;">
-        <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="w-100" style="max-height: 480px; object-fit: cover;">
+        <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="w-100" style="max-height: 480px; object-fit: cover;" decoding="async">
     </div>
 
     <!-- Article Content (Canva Page 7) -->

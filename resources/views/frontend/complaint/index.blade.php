@@ -20,33 +20,32 @@
     <div class="row align-items-start g-5 mb-5">
         <!-- Left: Form (Canva Page 15) -->
         <div class="col-lg-7">
-            <div class="card-canva p-4 p-md-5 shadow-sm border-top border-4 border-primary">
-                <h4 class="fw-bold text-dark mb-2">Formulir Aspirasi & Pengaduan</h4>
-                <p class="text-secondary small mb-4">
-                    Sampaikan keluhan, aspirasi, atau permohonan informasi publik Anda. Setiap laporan akan ditindaklanjuti secara resmi oleh tim pengelola.
-                </p>
+            <h4 class="fw-bold text-dark mb-2">Formulir Aspirasi & Pengaduan</h4>
+            <p class="text-secondary small mb-4">
+                Sampaikan keluhan, aspirasi, atau permohonan informasi publik Anda. Setiap laporan akan ditindaklanjuti secara resmi oleh tim pengelola.
+            </p>
 
-                @if(session('success'))
-                    <div class="alert alert-canva-success mb-4">
-                        <i class="fa-solid fa-circle-check me-2"></i> {{ session('success') }}
+            @if(session('success'))
+                <div class="alert alert-canva-success mb-4">
+                    <i class="fa-solid fa-circle-check me-2"></i> {{ session('success') }}
+                </div>
+            @endif
+
+            @if($errors->any())
+                <div class="alert alert-canva-danger mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-2 fw-bold">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>Terdapat kesalahan input:</span>
                     </div>
-                @endif
+                    <ul class="mb-0 small ps-3">
+                        @foreach($errors->all() as $err)
+                            <li>{{ $err }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-                @if($errors->any())
-                    <div class="alert alert-canva-danger mb-4">
-                        <div class="d-flex align-items-center gap-2 mb-2 fw-bold">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <span>Terdapat kesalahan input:</span>
-                        </div>
-                        <ul class="mb-0 small ps-3">
-                            @foreach($errors->all() as $err)
-                                <li>{{ $err }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
-                <form method="POST" action="{{ route('saran-aduan.store') }}" class="form-canva">
+            <form method="POST" action="{{ route('saran-aduan.store') }}" class="form-canva">
                     @csrf
 
                     <!-- Nama -->
@@ -116,25 +115,22 @@
                         </button>
                     </div>
                 </form>
-            </div>
         </div>
 
         <!-- Right: Photo (Canva Page 15) -->
         <div class="col-lg-5">
-            <div class="card-canva p-2 overflow-hidden shadow-sm mb-4">
-                <img src="{{ asset('images/WebMuspenBaruImages/Pengaduan.png') }}" alt="Pengaduan Pelayanan Museum Penerangan" class="w-100 h-100" style="object-fit: cover;">
-            </div>
+            <img src="{{ asset('images/WebMuspenBaruImages/Pengaduan.webp') }}" alt="Pengaduan Pelayanan Museum Penerangan" class="img-fluid w-100 mb-4" style="object-fit: cover;" loading="lazy" decoding="async">
 
             <!-- SPAN LAPOR Info Box -->
-            <div class="card-canva p-4 shadow-sm" style="background-color: #F8FAFC;">
+            <div class="pt-3 border-top">
                 <div class="d-flex align-items-center gap-3 mb-3">
-                    <img src="{{ asset('images/WebMuspenBaruImages/SPANLapor.png') }}" alt="Logo SPAN LAPOR!" style="height: 38px;">
+                    <img src="{{ asset('images/WebMuspenBaruImages/SPANLapor.webp') }}" alt="Logo SPAN LAPOR!" style="height: 38px;" loading="lazy" decoding="async">
                     <div>
                         <h6 class="fw-bold text-dark mb-0">Terhubung SP4N-LAPOR!</h6>
                         <small class="text-muted">Kanal Aspirasi Nasional RI</small>
                     </div>
                 </div>
-                <p class="small text-secondary mb-3" style="line-height: 1.6;">
+                <p class="small text-secondary mb-3" style="line-height: 1.7;">
                     Anda juga dapat menyampaikan laporan pengaduan melalui portal nasional SP4N-LAPOR! yang terhubung langsung dengan kementerian dan lembaga negara.
                 </p>
                 <a href="{{ route('complaint.span-lapor') }}" class="link-cta-canva small fw-semibold" style="margin-top: 0;">

@@ -22,12 +22,16 @@
 
     <!-- Featured Banner Photo (Canva Page 7) -->
     <div class="mb-4 overflow-hidden border shadow-sm" style="border-color: #E2E8F0 !important;">
-        <img src="{{ $event->image_url }}" alt="{{ $event->name }}" class="w-100" style="max-height: 480px; object-fit: cover;">
+        <img src="{{ $event->image_url }}" alt="{{ $event->name }}" class="w-100" style="max-height: 480px; object-fit: cover;" decoding="async">
     </div>
 
     <!-- Event Description Content (Canva Page 7) -->
     <div class="article-content text-dark mb-5 canva-paragraph-justify" style="line-height: 1.85; font-size: 1.05rem;">
-        {!! nl2br(e($event->description)) !!}
+        @if(Str::contains($event->description, ['<p>', '<br>', '<div>', '<ul>', '<ol>']))
+            {!! strip_tags($event->description, '<p><br><strong><em><b><i><ul><ol><li>') !!}
+        @else
+            <p class="mb-0">{!! nl2br(e($event->description)) !!}</p>
+        @endif
     </div>
 
     <!-- Info Detail Kegiatan (Canva Page 7 card style) -->

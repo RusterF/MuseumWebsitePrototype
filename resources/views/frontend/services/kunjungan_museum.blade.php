@@ -11,47 +11,54 @@
     </p>
 
     <!-- Hero Banner Photo: Children with Museum Guide (Canva Page 8) -->
-    <div class="mb-5 overflow-hidden shadow-sm border" style="border-color: #E2E8F0 !important;">
-        <img src="{{ asset('images/WebMuspenBaruImages/KunjunganMuseum.png') }}" alt="Kunjungan Museum Penerangan" class="w-100 h-auto d-block">
+    <div class="mb-5">
+        <img src="{{ asset('images/WebMuspenBaruImages/KunjunganMuseum.webp') }}" alt="Kunjungan Museum Penerangan" class="w-100 h-auto d-block img-fluid" decoding="async">
     </div>
 
-    <!-- 1. Jam Operasional (Google Doc Section 5.1 & Canva Page 8) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Jam Operasional</h5>
+    <!-- 1 & 2: Informasi Kunjungan (Jam Operasional & Tiket) -->
+    <div class="row g-4 mb-5">
+        <!-- 1. Jam Operasional (Google Doc Section 5.1 & Canva Page 8) -->
+        <div class="col-md-7">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🕒</span>
+                <h5 class="fw-bold text-dark mb-0">Jam Operasional</h5>
+            </div>
+            <div class="ps-3 text-secondary" style="line-height: 1.85; font-size: 1rem;">
+                <div class="mb-1"><i class="fa-regular fa-clock me-2 text-primary"></i> <strong>Setiap Hari:</strong> pukul 09.00 - 15.00 WIB</div>
+                <div class="mb-1"><i class="fa-solid fa-mug-hot me-2 text-muted"></i> <strong>Istirahat:</strong> pukul 12.00 - 13.00 WIB</div>
+                <div class="text-muted fst-italic small mt-1">(Informasi tutup akan diumumkan pada media sosial Museum Penerangan)</div>
+            </div>
         </div>
-        <div class="ps-3 text-secondary" style="line-height: 1.8; font-size: 0.95rem;">
-            <div><i class="fa-regular fa-clock me-2 text-primary"></i> <strong>Setiap Hari:</strong> pukul 09.00 - 15.00 WIB</div>
-            <div><i class="fa-solid fa-mug-hot me-2 text-muted"></i> <strong>Istirahat:</strong> pukul 12.00 - 13.00 WIB</div>
-            <div class="text-muted fst-italic small mt-1">(Informasi tutup akan diumumkan pada media sosial Museum Penerangan)</div>
+
+        <!-- 2. Harga Tiket Masuk (Google Doc Section 5.1 & Canva Page 8) -->
+        <div class="col-md-5">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="section-emoji-blue">🎟️</span>
+                <h5 class="fw-bold text-dark mb-0">Harga Tiket Masuk</h5>
+            </div>
+            <div class="ps-3 text-secondary" style="font-size: 1rem;">
+                <div class="mb-2">
+                    <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
+                </div>
+                <p class="text-muted small mb-0">Tidak dipungut biaya retribusi masuk ke dalam museum.</p>
+            </div>
         </div>
     </div>
 
-    <!-- 2. Harga Tiket Masuk (Google Doc Section 5.1 & Canva Page 8) -->
-    <div class="card-canva p-4 mb-4 shadow-sm" style="background-color: #F8FAFC;">
-        <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Harga Tiket Masuk</h5>
-        </div>
-        <div class="ps-3 text-secondary" style="font-size: 0.95rem;">
-            <span class="badge-canva-success fs-6 px-3 py-1 fw-bold">Gratis</span>
-            <span class="ms-2 small text-muted">Tidak dipungut biaya retribusi masuk ke dalam museum.</span>
-        </div>
-    </div>
+    <hr class="my-5 text-muted opacity-25">
 
     <!-- 3. Prosedur Berkunjung (Google Doc Section 5.1) -->
-    <div class="card-canva p-4 mb-4 shadow-sm">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Prosedur Berkunjung</h5>
+    <div class="mb-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="section-emoji-blue">📋</span>
+            <h4 class="fw-bold text-dark mb-0">Prosedur Berkunjung</h4>
         </div>
-        <div class="ps-3 text-secondary" style="font-size: 0.98rem; line-height: 1.85;">
+        <div class="ps-3 text-secondary" style="font-size: 1rem; line-height: 1.85;">
             <!-- Kunjungan Individu -->
             <div class="mb-4">
                 <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-user me-2 text-primary"></i> Kunjungan Individu:</h6>
                 <ol class="ps-3 mb-0 canva-paragraph-justify">
-                    <li>Pengunjung datang langsung ke Museum Penerangan.</li>
+                    <li class="mb-1">Pengunjung datang langsung ke Museum Penerangan.</li>
                     <li>Pengunjung mengisi buku tamu elektronik (e-guestbook) pada tablet yang tersedia di meja resepsionis.</li>
                 </ol>
             </div>
@@ -60,35 +67,37 @@
             <div>
                 <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-users me-2 text-primary"></i> Kunjungan Rombongan:</h6>
                 <ol class="ps-3 mb-0 canva-paragraph-justify">
-                    <li>Rombongan melakukan reservasi dan memastikan jadwal kunjungan melalui call center Museum Penerangan di <strong>0811 813 2121</strong>.</li>
-                    <li>Kunjungan Rombongan dinyatakan terdaftar setelah petugas call center mengonfirmasi reservasi melalui WhatsApp.</li>
-                    <li>Untuk Kunjungan Rombongan yang melakukan survei, penentuan jadwal bisa dilakukan secara langsung di lokasi dan tetap harus melakukan reservasi lewat call center. Jika dalam waktu 2x24 jam (2 hari) reservasi belum dilakukan, jadwal kunjungan dibatalkan.</li>
-                    <li>Rombongan datang sesuai jadwal dan mendapat layanan informasi serta pendampingan edukator.</li>
+                    <li class="mb-1">Rombongan melakukan reservasi dan memastikan jadwal kunjungan melalui call center Museum Penerangan di <strong>0811 813 2121</strong>.</li>
+                    <li class="mb-1">Kunjungan Rombongan dinyatakan terdaftar setelah petugas call center mengonfirmasi reservasi melalui WhatsApp.</li>
+                    <li class="mb-1">Untuk Kunjungan Rombongan yang melakukan survei, penentuan jadwal bisa dilakukan secara langsung di lokasi dan tetap harus melakukan reservasi lewat call center. Jika dalam waktu 2x24 jam (2 hari) reservasi belum dilakukan, jadwal kunjungan dibatalkan.</li>
+                    <li class="mb-1">Rombongan datang sesuai jadwal dan mendapat layanan informasi serta pendampingan edukator.</li>
                     <li>Rombongan yang datang terlambat dapat dilayani sesuai dengan waktu yang tersedia.</li>
                 </ol>
             </div>
         </div>
     </div>
 
+    <hr class="my-5 text-muted opacity-25">
+
     <!-- 4. Tata Tertib Berkunjung (Google Doc Section 5.1) -->
-    <div class="card-canva p-4 mb-5 shadow-sm">
+    <div class="mb-5">
         <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="section-dot-marker"></span>
-            <h5 class="fw-bold text-dark mb-0">Tata Tertib Berkunjung</h5>
+            <span class="section-emoji-blue">📋</span>
+            <h4 class="fw-bold text-dark mb-0">Tata Tertib Berkunjung</h4>
         </div>
-        <div class="ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 0.98rem;">
-            <p class="mb-2">
+        <div class="ps-3 text-secondary canva-paragraph-justify" style="line-height: 1.85; font-size: 1rem;">
+            <p class="mb-3 text-dark">
                 Pengunjung mematuhi ketertiban dan ketentuan yang berlaku di Museum Penerangan selama kunjungan ke ruang pamer. Ketentuan ini mencakup:
             </p>
             <ol class="ps-3 mb-0">
-                <li>Menitipkan barang bawaan di tempat yang telah disediakan;</li>
-                <li>Dilarang membawa makanan dan minuman di dalam ruang pamer;</li>
-                <li>Tidak bersandar atau menduduki kaca pelindung dan display koleksi;</li>
-                <li>Tidak menyentuh koleksi (kecuali alat peraga yang memiliki tanda khusus);</li>
-                <li>Tidak mencoret atau merusak properti Museum Penerangan;</li>
-                <li>Tidak merokok/vape di dalam ruang pamer;</li>
-                <li>Mengikuti alur kunjungan yang telah ditentukan oleh Museum Penerangan;</li>
-                <li>Pengunjung diperbolehkan untuk melakukan pengambilan gambar atau rekaman selama tidak untuk penggunaan komersial dan tidak mengganggu alur kunjungan;</li>
+                <li class="mb-1">Menitipkan barang bawaan di tempat yang telah disediakan;</li>
+                <li class="mb-1">Dilarang membawa makanan dan minuman di dalam ruang pamer;</li>
+                <li class="mb-1">Tidak bersandar atau menduduki kaca pelindung dan display koleksi;</li>
+                <li class="mb-1">Tidak menyentuh koleksi (kecuali alat peraga yang memiliki tanda khusus);</li>
+                <li class="mb-1">Tidak mencoret atau merusak properti Museum Penerangan;</li>
+                <li class="mb-1">Tidak merokok/vape di dalam ruang pamer;</li>
+                <li class="mb-1">Mengikuti alur kunjungan yang telah ditentukan oleh Museum Penerangan;</li>
+                <li class="mb-1">Pengunjung diperbolehkan untuk melakukan pengambilan gambar atau rekaman selama tidak untuk penggunaan komersial dan tidak mengganggu alur kunjungan;</li>
                 <li>Pengunjung yang melakukan pengambilan gambar atau rekaman untuk penggunaan komersial perlu mendapatkan persetujuan Museum Penerangan. Petugas Museum Penerangan wajib memastikan tujuan pengambilan gambar atau rekaman yang dilakukan oleh pengunjung apabila menggunakan kamera profesional.</li>
             </ol>
         </div>

@@ -27,10 +27,10 @@
 <section class="section-py bg-white">
     <div class="container">
         <div class="row g-5">
-            <!-- Left: Official Contact Cards -->
+            <!-- Left: Official Contact List -->
             <div class="col-lg-5">
-                <div class="card-canva p-4 p-md-5 h-100 shadow-sm border-top border-4 border-primary d-flex flex-column" style="background-color: #F8FAFC;">
-                    <h4 class="fw-bold text-dark mb-4">Saluran Resmi Muspen</h4>
+                <div class="d-flex flex-column h-100 pe-lg-4">
+                    <h3 class="fw-bold text-dark mb-4">Saluran Resmi Muspen</h3>
 
                     @php
                         $cleanPhone = preg_replace('/[^0-9]/', '', $phone ?? '08118132121');
@@ -45,8 +45,8 @@
 
                     <!-- 1. Call Center -->
                     <div class="d-flex gap-3 mb-4">
-                        <div class="p-3 bg-white border text-success d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                            <i class="fa-brands fa-whatsapp fs-4"></i>
+                        <div class="text-success fs-3 flex-shrink-0 pt-1" style="width: 36px;">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Call Center & WhatsApp</span>
@@ -59,8 +59,8 @@
 
                     <!-- 2. Instagram -->
                     <div class="d-flex gap-3 mb-4">
-                        <div class="p-3 bg-white border text-danger d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                            <i class="fa-brands fa-instagram fs-4"></i>
+                        <div class="text-danger fs-3 flex-shrink-0 pt-1" style="width: 36px;">
+                            <i class="fa-brands fa-instagram"></i>
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Instagram</span>
@@ -73,8 +73,8 @@
 
                     <!-- 3. TikTok -->
                     <div class="d-flex gap-3 mb-4">
-                        <div class="p-3 bg-white border text-dark d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                            <i class="fa-brands fa-tiktok fs-4"></i>
+                        <div class="text-dark fs-3 flex-shrink-0 pt-1" style="width: 36px;">
+                            <i class="fa-brands fa-tiktok"></i>
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">TikTok</span>
@@ -87,8 +87,8 @@
 
                     <!-- 4. Email Resmi -->
                     <div class="d-flex gap-3 mb-4">
-                        <div class="p-3 bg-white border text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                            <i class="fa-regular fa-envelope fs-4"></i>
+                        <div class="text-primary fs-3 flex-shrink-0 pt-1" style="width: 36px;">
+                            <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Email Resmi</span>
@@ -99,8 +99,8 @@
 
                     <!-- 5. Alamat Fisik -->
                     <div class="d-flex gap-3 mb-4">
-                        <div class="p-3 bg-white border text-warning d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                            <i class="fa-solid fa-location-dot fs-4"></i>
+                        <div class="text-warning fs-3 flex-shrink-0 pt-1" style="width: 36px;">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div>
                             <span class="text-muted small text-uppercase fw-bold">Alamat Gedung</span>
@@ -112,7 +112,7 @@
 
                     <div class="pt-3 border-top mt-auto">
                         <a href="{{ route('booking.create') }}" class="btn-canva-primary w-100 py-3 fw-bold text-uppercase justify-content-center" style="font-size: 0.85rem;">
-                            <i class="fa-solid fa-calendar-check me-2"></i> Reservasi Kunjungan Sekarang
+                            Reservasi Kunjungan Sekarang <i class="fa-solid fa-arrow-right-long ms-2"></i>
                         </a>
                     </div>
                 </div>
@@ -120,32 +120,28 @@
 
             <!-- Right: Map & Operational Guidelines -->
             <div class="col-lg-7">
-                <div class="card-canva p-4 bg-white shadow-sm h-100 d-flex flex-column">
+                <div class="d-flex flex-column h-100">
                     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                        <h5 class="fw-bold text-dark mb-0"><i class="fa-solid fa-map-location-dot text-primary me-2"></i> Peta Lokasi Google Maps</h5>
+                        <h4 class="fw-bold text-dark mb-0">Peta Lokasi Google Maps</h4>
                         <a href="https://maps.app.goo.gl/3q6Z1v1c" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark fw-semibold">
-                            <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Buka di Aplikasi Maps
+                            Buka di Aplikasi Maps <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
                         </a>
                     </div>
 
                     <!-- Google Maps Iframe -->
-                    <div class="ratio ratio-16x9 border flex-grow-1" style="min-height: 380px;">
+                    <div class="ratio ratio-16x9 flex-grow-1 mb-4" style="min-height: 380px;">
                         <iframe title="Peta Lokasi Museum Penerangan di TMII" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.728881709309!2d106.8973719!3d-6.3006208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5a7114bbfd%3A0xe54ef7bf8be7091!2sMuseum%20Penerangan!5e0!3m2!1sid!2sid!4v1657000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; width:100%; height:100%;"></iframe>
                     </div>
 
                     <!-- Rute & Petunjuk Kunjungan -->
-                    <div class="row g-3 mt-3">
+                    <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="p-3 border small" style="background-color: #F8FAFC;">
-                                <strong class="text-dark d-block mb-1"><i class="fa-solid fa-train-subway text-primary me-1"></i> Transportasi LRT:</strong>
-                                <span class="text-secondary">Turun di <strong>Stasiun LRT TMII</strong>, lanjutkan menaiki Shuttle Keliling TMII menuju Halte Museum Penerangan.</span>
-                            </div>
+                            <strong class="text-dark d-block mb-1"><i class="fa-solid fa-train-subway text-primary me-1"></i> Transportasi LRT:</strong>
+                            <span class="text-secondary small" style="line-height: 1.7;">Turun di <strong>Stasiun LRT TMII</strong>, lanjutkan menaiki Shuttle Keliling TMII menuju Halte Museum Penerangan.</span>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 border small" style="background-color: #F8FAFC;">
-                                <strong class="text-dark d-block mb-1"><i class="fa-solid fa-bus text-primary me-1"></i> Transportasi TransJakarta:</strong>
-                                <span class="text-secondary">Gunakan rute Koridor 9 / Mikrotrans JakLingko arah TMII Pintu 3, lalu masuk melalui Gerbang Utama TMII.</span>
-                            </div>
+                            <strong class="text-dark d-block mb-1"><i class="fa-solid fa-bus text-primary me-1"></i> Transportasi TransJakarta:</strong>
+                            <span class="text-secondary small" style="line-height: 1.7;">Gunakan rute Koridor 9 / Mikrotrans JakLingko arah TMII Pintu 3, lalu masuk melalui Gerbang Utama TMII.</span>
                         </div>
                     </div>
                 </div>

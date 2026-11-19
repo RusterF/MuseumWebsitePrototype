@@ -8,8 +8,8 @@
     <h2 class="title-blue mb-4">Reservasi</h2>
 
     <!-- Map Graphic (Canva Page 14) -->
-    <div class="mb-3 overflow-hidden shadow-sm border" style="max-height: 480px; border-color: #E2E8F0 !important;">
-        <img src="{{ asset('images/WebMuspenBaruImages/GMap.png') }}" alt="Peta Lokasi Museum Penerangan TMII" class="w-100 h-100" style="object-fit: cover;">
+    <div class="mb-3">
+        <img src="{{ asset('images/WebMuspenBaruImages/GMap.webp') }}" alt="Peta Lokasi Museum Penerangan TMII" class="w-100 img-fluid" style="max-height: 480px; object-fit: cover;" loading="lazy" decoding="async">
     </div>
 
     <!-- Link below map: "Lihat lokasi Museum Penerangan di Google Maps →" (Canva Page 14) -->
@@ -26,14 +26,14 @@
             Museum Penerangan menyambut kunjungan perorangan, rombongan sekolah, instansi pemerintah, dan komunitas masyarakat umum. Layanan tiket masuk museum tidak dipungut biaya retribusi (Gratis). Untuk rombongan dengan jumlah lebih dari 20 orang, dimohon melakukan reservasi jadwal kedatangan guna mendapatkan fasilitas pemanduan edukatif secara optimal.
         </p>
 
-        <div class="mb-4">
+        <div class="mb-5">
             <a href="{{ route('services.kunjungan-museum') }}" class="link-cta-canva fw-semibold small" style="margin-top: 0;">
                 Lihat tata tertib kunjungan <i class="fa-solid fa-arrow-right-long ms-1"></i>
             </a>
         </div>
 
-        <!-- Green Call Center Button (Canva Page 14) -->
-        <div class="card-canva p-4 p-md-5 shadow-sm border-start border-4 border-success" style="background-color: #F8FAFC;">
+        <!-- Green Call Center Banner (Canva Page 14) -->
+        <div class="pt-4 border-top">
             <div class="row align-items-center g-4">
                 <div class="col-md-8">
                     <div class="badge-canva mb-2 text-success" style="background-color: #DCFCE7; border-color: #86EFAC;">

@@ -36,7 +36,7 @@
                     <!-- Thumbnail (Canva Page 6 - Proportional height, not gepeng) -->
                     <div class="publikasi-card-thumb mb-2">
                         <a href="{{ $cardUrl }}">
-                            <img src="{{ $art->image_url }}" alt="{{ $art->title }}">
+                            <img src="{{ $art->image_url }}" alt="{{ $art->title }}" loading="lazy" decoding="async">
                         </a>
                     </div>
 

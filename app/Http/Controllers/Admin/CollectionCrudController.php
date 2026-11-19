@@ -75,12 +75,15 @@ class CollectionCrudController extends CrudController
         ]);
         CRUD::field('registration_number')->label('Nomor Registrasi')->type('text');
         CRUD::field('inventory_number')->label('Nomor Inventaris')->type('text');
-        CRUD::field('registration_year')->label('Tahun Registrasi / Akuisisi')->type('text');
-        CRUD::field('contributor')->label('Penyumbang / Asal Usul')->type('text');
+        CRUD::field('registration_year')->label('Tahun Registrasi / Periode')->type('text');
+        CRUD::field('asal_instansi')->label('Asal / Instansi')->type('text');
+        CRUD::field('pembuat')->label('Pembuat / Produsen')->type('text');
         CRUD::field('bahan')->label('Bahan / Material')->type('text');
-        CRUD::field('ukuran')->label('Ukuran / Dimensi')->type('text');
+        CRUD::field('ukuran')->label('Dimensi (Ukuran p, l, t)')->type('text');
         CRUD::field('file')->label('Foto Koleksi')->type('text')->hint('Path file atau URL gambar');
-        CRUD::field('description')->label('Deskripsi Sejarah & Informasi')->type('textarea');
+        CRUD::field('description')->label('Deskripsi Koleksi')->type('textarea');
+        CRUD::field('sejarah_konteks')->label('Sejarah dan Konteks')->type('textarea');
+        CRUD::field('nilai_penting')->label('Nilai Penting')->type('textarea');
         CRUD::field('status')->label('Status Publikasi')->type('select_from_array')->options([
             'PUBLISH' => 'Publikasikan',
             'DRAFT' => 'Draft',

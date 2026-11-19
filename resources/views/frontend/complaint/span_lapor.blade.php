@@ -28,16 +28,16 @@
 <section class="section-py bg-white">
     <div class="container">
         <!-- Center Section: LAPOR! Logo & CTA -->
-        <div class="card-canva p-4 p-md-5 text-center mb-5 shadow-sm" style="background-color: #F8FAFC;">
+        <div class="text-center mb-5 pb-4 border-bottom">
             <div class="mb-3">
-                <img src="{{ asset('images/lapor.png') }}" alt="SPAN LAPOR!" style="height: 65px; width: auto;" class="img-fluid">
+                <img src="{{ asset('images/lapor.webp') }}" alt="SPAN LAPOR!" style="height: 65px; width: auto;" class="img-fluid" loading="lazy" decoding="async">
             </div>
-            <p class="text-secondary max-w-700 mx-auto mb-4" style="line-height: 1.7;">
+            <p class="text-secondary max-w-700 mx-auto mb-4" style="line-height: 1.7; font-size: 1.05rem;">
                 Sampaikan aspirasi dan pengaduan Anda mengenai pelayanan publik Museum Penerangan secara langsung melalui kanal resmi pemerintah Republik Indonesia.
             </p>
             <div>
                 <a href="https://www.lapor.go.id/" target="_blank" rel="noopener noreferrer" class="btn-canva-primary px-5 py-3 fw-bold text-uppercase">
-                    <i class="fa-solid fa-arrow-up-right-from-square me-2"></i> Akses Portal SPAN LAPOR!
+                    Akses Portal SPAN LAPOR! <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
                 </a>
             </div>
         </div>
@@ -45,7 +45,7 @@
         <!-- Content: Laptop Mockup Left, Description Right (Canva Page 16) -->
         <div class="row align-items-center g-5 mb-4">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('images/WebMuspenBaruImages/SPANLapor.png') }}" alt="Portal SPAN LAPOR" class="img-fluid" style="max-height: 420px; width: auto;">
+                <img src="{{ asset('images/WebMuspenBaruImages/SPANLapor.webp') }}" alt="Portal SPAN LAPOR" class="img-fluid" style="max-height: 420px; width: auto;" loading="lazy" decoding="async">
             </div>
             <div class="col-md-6">
                 <h4 class="title-blue mb-3">Tentang SP4N-LAPOR!</h4>

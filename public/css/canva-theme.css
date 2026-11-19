@@ -301,6 +301,63 @@ body {
     .navbar-canva .nav-item.dropdown.show > .nav-link.dropdown-toggle {
         color: var(--canva-accent-blue) !important;
     }
+
+    /* Desktop Dynamic Chevron: Ke bawah saat normal, Ke atas saat menampilkan dropdown (hover) */
+    .navbar-canva .nav-link.dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .navbar-canva .nav-link.dropdown-toggle::after {
+        display: inline-block;
+        content: '';
+        width: 7px;
+        height: 7px;
+        border: none;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg); /* Ke bawah saat normal (tidak hover) */
+        transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-left: 6px;
+        margin-top: -3px;
+        vertical-align: middle;
+    }
+
+    .navbar-canva .nav-item.dropdown:hover > .nav-link.dropdown-toggle::after,
+    .navbar-canva .nav-item.dropdown.show > .nav-link.dropdown-toggle::after {
+        transform: rotate(-135deg); /* Ke atas saat menampilkan menu dropdown (hover) */
+        margin-top: 3px;
+    }
+
+    /* Pastikan saat halaman child aktif, arrow dropdown tetap sejajar di samping tulisan (tidak turun ke baris bawah) */
+    .navbar-canva .nav-link.dropdown-toggle.active {
+        display: inline-flex !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        padding-bottom: 8px !important;
+    }
+
+    .navbar-canva .nav-link.dropdown-toggle.active::after {
+        position: static !important;
+        display: inline-block !important;
+        width: 7px !important;
+        height: 7px !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-right: 2px solid currentColor !important;
+        border-bottom: 2px solid currentColor !important;
+        transform: rotate(45deg) !important;
+        margin-left: 6px !important;
+        margin-top: -3px !important;
+        vertical-align: middle !important;
+    }
+
+    .navbar-canva .nav-item.dropdown:hover > .nav-link.dropdown-toggle.active::after,
+    .navbar-canva .nav-item.dropdown.show > .nav-link.dropdown-toggle.active::after {
+        transform: rotate(-135deg) !important;
+        margin-top: 3px !important;
+    }
 }
 
 .navbar-canva .btn-reservasi {
@@ -1046,20 +1103,22 @@ body {
    1. NAVBAR ENHANCEMENTS
 -------------------------------------------------------------------------- */
 
-/* Active nav-link bottom border indicator */
-.navbar-canva .nav-link.active {
-    position: relative;
-    padding-bottom: 10px !important;
-}
+/* Active nav-link bottom border indicator (khusus nav-link biasa, bukan dropdown-toggle) */
+@media (min-width: 992px) {
+    .navbar-canva .nav-link:not(.dropdown-toggle).active {
+        position: relative;
+        padding-bottom: 10px !important;
+    }
 
-.navbar-canva .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 18px;
-    right: 18px;
-    height: 2px;
-    background-color: #2563EB;
+    .navbar-canva .nav-link:not(.dropdown-toggle).active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 18px;
+        right: 18px;
+        height: 2px;
+        background-color: #2563EB;
+    }
 }
 
 /* Dropdown item hover background */
@@ -1518,12 +1577,15 @@ body {
 -------------------------------------------------------------------------- */
 /* Active nav indicator */
 .navbar-canva .nav-link.active {
-    position: relative;
     font-weight: 600;
 }
 
 @media (min-width: 992px) {
-    .navbar-canva .nav-link.active::after {
+    .navbar-canva .nav-link:not(.dropdown-toggle).active {
+        position: relative;
+    }
+
+    .navbar-canva .nav-link:not(.dropdown-toggle).active::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -1565,31 +1627,225 @@ body {
     font-size: 0.88rem;
 }
 
-/* Mobile menu improvements */
-@media (max-width: 991px) {
+/* ==========================================================================
+   MOBILE NAVBAR & ACCORDION DROPDOWN OPTIMIZATION
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    /* Navbar container */
+    .navbar-canva {
+        padding: 10px 0;
+    }
+
+    /* Navbar collapse container */
     .navbar-canva .navbar-collapse {
         background-color: #FFFFFF;
-        padding: 16px;
+        padding: 12px 14px 18px 14px;
         margin-top: 10px;
         border: 1px solid #E2E8F0;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 14px 36px rgba(16, 28, 53, 0.12);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0 !important;
+    }
+
+    /* Clean scrollbar for navbar-collapse on mobile */
+    .navbar-canva .navbar-collapse::-webkit-scrollbar {
+        width: 4px;
+    }
+    .navbar-canva .navbar-collapse::-webkit-scrollbar-thumb {
+        background: #CBD5E1;
+    }
+
+    /* Mobile Nav Items & Links */
+    .navbar-canva .nav-item {
+        margin-bottom: 2px;
+        width: 100%;
     }
 
     .navbar-canva .nav-link {
-        padding: 12px 14px !important;
-        min-height: 44px;
+        padding: 13px 16px !important;
+        min-height: 48px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1E293B !important;
+        border-radius: 0 !important;
         border-bottom: 1px solid #F1F5F9;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.15s ease, color 0.15s ease;
     }
 
-    .navbar-canva .nav-item:last-child .nav-link {
+    .navbar-canva .nav-link:hover,
+    .navbar-canva .nav-link:focus,
+    .navbar-canva .nav-link:active {
+        background-color: #F8FAFC;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-canva .nav-link.active {
+        color: var(--canva-accent-blue) !important;
+        background-color: #EFF6FF;
+        border-left: 3px solid var(--canva-accent-blue);
+    }
+
+    /* Mobile Dropdown Toggle (Accordion Header) */
+    .navbar-canva .dropdown-toggle {
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Remove default Bootstrap caret and replace with modern rotating arrow: Ke bawah saat normal, Ke atas saat dibuka */
+    .navbar-canva .dropdown-toggle::after {
+        display: inline-block;
+        content: '';
+        width: 9px;
+        height: 9px;
+        border: none;
+        border-right: 2px solid #64748B;
+        border-bottom: 2px solid #64748B;
+        transform: rotate(45deg); /* Ke bawah saat tidak terbuka (normal) */
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease;
+        margin-left: auto;
+        margin-right: 4px;
+        margin-top: -2px;
+        vertical-align: middle;
+    }
+
+    /* When dropdown is open / hover: Panah berputar ke ATAS */
+    .navbar-canva .dropdown-toggle[aria-expanded="true"],
+    .navbar-canva .dropdown.show > .dropdown-toggle {
+        background-color: #F8FAFC;
+        color: var(--canva-accent-blue) !important;
+    }
+
+    .navbar-canva .dropdown-toggle[aria-expanded="true"]::after,
+    .navbar-canva .dropdown.show > .dropdown-toggle::after {
+        transform: rotate(-135deg); /* Ke atas saat aktif/terbuka menampilkan menu */
+        border-color: var(--canva-accent-blue);
+        margin-top: 4px;
+    }
+
+    /* Pastikan saat halaman child aktif di mobile, arrow dropdown tetap di kanan dan sejajar (tidak pindah ke baris bawah) */
+    .navbar-canva .dropdown-toggle.active {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .navbar-canva .dropdown-toggle.active::after {
+        position: static !important;
+        display: inline-block !important;
+        width: 9px !important;
+        height: 9px !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-right: 2px solid var(--canva-accent-blue) !important;
+        border-bottom: 2px solid var(--canva-accent-blue) !important;
+        transform: rotate(45deg) !important;
+        margin-left: auto !important;
+        margin-right: 4px !important;
+        margin-top: -2px !important;
+        vertical-align: middle !important;
+    }
+
+    .navbar-canva .dropdown-toggle[aria-expanded="true"].active::after,
+    .navbar-canva .dropdown.show > .dropdown-toggle.active::after {
+        transform: rotate(-135deg) !important;
+        border-color: var(--canva-accent-blue) !important;
+        margin-top: 4px !important;
+    }
+
+    /* Mobile Dropdown Menu Container */
+    .navbar-canva .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        float: none;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 4px 0 4px 10px !important;
+        border: none !important;
+        border-left: 3px solid #E2E8F0 !important;
+        background-color: #F8FAFC !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        animation: none !important;
+    }
+
+    .navbar-canva .dropdown.show .dropdown-menu {
+        border-left-color: var(--canva-accent-blue) !important;
+    }
+
+    /* Mobile Dropdown Items */
+    .navbar-canva .dropdown-item {
+        font-size: 0.92rem;
+        font-weight: 500;
+        padding: 12px 14px !important;
+        min-height: 48px;
+        color: #334155 !important;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EDF2F7;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        white-space: normal;
+        line-height: 1.4;
+        transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+    }
+
+    .navbar-canva .dropdown-item:last-child {
         border-bottom: none;
     }
 
-    .navbar-canva .dropdown-menu {
-        border: none !important;
+    .navbar-canva .dropdown-item:hover,
+    .navbar-canva .dropdown-item:active,
+    .navbar-canva .dropdown-item:focus {
+        background-color: #EFF6FF !important;
+        color: var(--canva-accent-blue) !important;
+        padding-left: 18px !important;
+        outline: none !important;
         box-shadow: none !important;
-        padding-left: 16px !important;
-        background-color: #F8FAFC !important;
+    }
+
+    .navbar-canva .dropdown-item.active {
+        background-color: #EBF5FF !important;
+        color: var(--canva-accent-blue) !important;
+        font-weight: 700;
+        border-left: 3px solid var(--canva-accent-blue);
+    }
+
+    .navbar-canva .dropdown-item i {
+        font-size: 0.95rem;
+        width: 24px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    /* Mobile Hamburger Toggler Button */
+    .navbar-canva .navbar-toggler {
+        padding: 8px 12px;
+        border: 1px solid #CBD5E1 !important;
+        border-radius: 0 !important;
+        background-color: #F8FAFC;
+        color: #1E293B;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-canva .navbar-toggler:focus,
+    .navbar-canva .navbar-toggler:active {
+        outline: none !important;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25) !important;
+        background-color: #EFF6FF;
+    }
+
+    .navbar-canva .navbar-toggler .toggler-icon {
+        display: inline-block;
+        transition: transform 0.2s ease;
     }
 }
 
@@ -2676,6 +2932,17 @@ body {
     display: inline-block;
 }
 
+.section-emoji-blue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--canva-accent-blue, #002B49);
+    filter: invert(16%) sepia(90%) saturate(3000%) hue-rotate(195deg) brightness(90%) contrast(105%);
+    flex-shrink: 0;
+}
+
 /* Global sharp corners enforcement for Bootstrap components */
 .btn, .card, .form-control, .form-select, .input-group-text,
 .badge, .alert, .ratio, .dropdown-menu, .modal-content,
@@ -2727,4 +2994,31 @@ body {
     border-color: #E2E8F0;
     cursor: not-allowed;
     opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   SLiMS LIBRARY CATALOG SEARCH (CANVA STYLED)
+-------------------------------------------------------------------------- */
+.catalog-tag-pill {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #334155;
+    background-color: #F8FAFC;
+    padding: 0.35rem 0.75rem;
+    text-decoration: none;
+    border: 1px solid #E2E8F0;
+    border-radius: 0 !important;
+    transition: all 0.2s ease;
+}
+
+.catalog-tag-pill:hover {
+    background-color: var(--canva-primary-navy, #0A2441);
+    color: #FFFFFF !important;
+    border-color: var(--canva-primary-navy, #0A2441);
+}
+
+.search-input-group .form-control:focus {
+    box-shadow: none !important;
+    border-color: var(--canva-accent-blue, #002B49) !important;
 }
